@@ -1,0 +1,59 @@
+/** Less mixins
+---------------------*/
+.transition (@transition) {
+  -webkit-transition: @transition;  
+  -moz-transition:    @transition;
+  -ms-transition:     @transition; 
+  -o-transition:      @transition;  
+}
+.transform(@string){
+  -webkit-transform: @string;
+  -moz-transform:    @string;
+  -ms-transform:     @string;
+  -o-transform:      @string;
+}
+.scale (@factor) {
+  -webkit-transform: scale(@factor);
+  -moz-transform:    scale(@factor);
+  -ms-transform:     scale(@factor);
+  -o-transform:      scale(@factor);
+}
+.rotate (@deg) {
+  -webkit-transform: rotate(@deg);
+  -moz-transform:    rotate(@deg);
+  -ms-transform:     rotate(@deg);
+  -o-transform:      rotate(@deg);
+}
+
+
+
+/** Less
+---------------------*/
+@icon_color: #49aeef;
+@link_color: #fff;
+@link_visited: #fff;
+@link_active: #fff;
+
+
+
+/** SVG Icons
+---------------------*/
+[class^="icon-"], [class*=" icon-"] {
+    position: relative;
+    top: -3px;
+    display: block;
+    color: #49aeef;
+    fill: currentColor;
+}
+.icon-facebook-square {
+    width: 42px;
+    height: 42px;
+}
+.icon-twitter {
+    width: 39px;
+    height: 42px;
+}
+.icon-instagram {
+    width: 42px;
+    height: 42px;
+}

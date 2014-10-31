@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Kat Solar</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- html5 boilerplate -->
+  <link rel="stylesheet" href="styles/vendor/normalize.css">
+  <link rel="stylesheet" href="styles/vendor/main.css">
+  <!-- Responsive CSS purecss.io -->
+  <link rel="stylesheet" href="styles/vendor/pure-min.css">
+  <!-- main css -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <script src="scripts/vendor/modernizr-2.6.2.min.js"></script>
+
+  <!-- favicon -->
+  <!-- No Favicon currently set!!
+  <link rel="icon" type="image/png" href="img/favicon.png"> -->
+</head>
+<body>
+
+  <div ng-include="'templates/player.html'"></div>
+  <nav ng-include="'templates/nav.html'"></nav>
+
+  <div ng-view></div>
+
+  <footer ng-include="'tempaltes/footer.html'"></footer>
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+
+  <!-- scripts -->
+  <script src="scripts/vendor/angular.js"></script>
+  <script src="scripts/vendor/angular-route.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- views -->
+  
+
+</body>
+</html>
