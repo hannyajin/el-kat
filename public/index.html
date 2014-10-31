@@ -21,6 +21,10 @@
   <link rel="icon" type="image/png" href="img/favicon.png"> -->
 </head>
 <body>
+  <ul class="menu">
+    <li><a href="#/home">Home</a></li>
+    <li><a href="#/about">About</a></li>
+  </ul>
 
   <div ng-view></div>
 
@@ -36,8 +40,17 @@
   <script src="scripts/vendor/angular.js"></script>
   <script src="scripts/vendor/angular-route.js"></script>
   <script src="scripts/main.js"></script>
+  <!-- YUI https://github.com/yui/yui3 -->
+  <script src="scripts/vendor/yui.min.js"></script>
   <!-- views -->
+  <script src="views/home/home.js"></script>
+  <script src="views/about/about.js"></script>
+  <script src="views/videos/videos.js"></script>
+  <script src="views/music/music.js"></script>
+  <script src="views/events/events.js"></script>
+  <script src="views/press/press.js"></script>
 
+  
 
 </body>
 </html>

@@ -4,11 +4,10 @@ angular.module('app.home', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
-    .when('/', {
+    .when('/home', {
       templateUrl: 'views/home/home.html',
       controller: 'homeCtrl'
-    })
-    .otherwise({ redirectTo: '/' });
+    });
 }])
 
 .controller('homeCtrl', [function() {
