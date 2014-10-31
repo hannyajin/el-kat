@@ -24,17 +24,193 @@
   -ms-transform:     rotate(@deg);
   -o-transform:      rotate(@deg);
 }
+.background-size (@string) {
+  -webkit-background-size: @string !important;
+  -moz-background-size: @string !important;
+  -o-background-size: @string !important;
+  background-size: @string !important;
+  z-index: -1000 !important;
+}
 
 
 
 /** Less
 ---------------------*/
 @icon_color: #49aeef;
+
 @link_color: #fff;
+@link_hover: #e8e8e8;
 @link_visited: #fff;
 @link_active: #fff;
 
+@text_color: #ba6363; // from about page
+@music_text_color: #1b0c18; // from music page
 
+@about_text_color: #4c3147; // from about page
+
+@press_title_color: #9c2ba9; // from press page
+@press_text_color: #1b0c18; // from press page
+
+
+/** Custom
+---------------------*/
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden !important;
+}
+
+/** Mplayer, music player
+---------------------*/
+.mplayer-icon {
+  background: url("../img/mplayer_icon.png") no-repeat;
+  display: block;
+  width: 100%;
+}
+.music-player p {
+  display: block;
+}
+
+
+/** Pages
+---------------------*/
+.logo-container {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+}
+
+#home-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 76%;
+  position: relative;
+}
+
+.cover-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  //.background-size("cover !important");
+  .background-size(cover);
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-home.cover-image {
+  background: url('../img/main-bg.jpg') no-repeat center top;
+}
+.page-about.cover-image {
+  background: url('../img/about-bg.jpg') no-repeat center top;
+}
+.page-events.cover-image {
+  background: url('../img/events-bg.jpg') no-repeat center top;
+}
+.page-music.cover-image {
+  background: url('../img/music-bg.jpg') no-repeat center top;
+}
+.page-press.cover-image {
+  background: url('../img/press-bg.jpg') no-repeat center top;
+}
+.page-videos.cover-image {
+  background: url('../img/videos-bg.jpg') no-repeat center top;
+}
+
+/** Navigation
+---------------------*/
+
+header {
+  top: 0;
+  left: 0;
+}
+
+nav {
+  float: right;
+  margin: 0;
+  padding: 0;
+  padding-top: 48px;
+}
+
+.nav-main {
+  margin: 0;
+  padding: 0;
+}
+
+// dropdown menu
+.dropdown {
+  padding-right: 48px;
+
+  .diamond-icon {
+    background: url("../img/diamond.png") no-repeat;
+    background-position: 40px 0px;
+    display: block;
+    width: 100%;
+    height: 9px;
+    position: absolute;
+    top: 5px;
+    overflow: hidden;
+  }
+
+  position: relative;
+
+  &:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    float: left;
+    z-index: 1000;
+    min-width: 120px;
+    list-style: none;
+    right: 0;
+    padding-top: 12px;
+    margin: 0;
+
+    &:hover {
+      display: block;
+    }
+
+    li {
+      display: block;
+    }
+
+    a {
+      display: block;
+      padding: 8px 20px;
+      color: @link_color;
+      background-color: @icon_color;
+      text-align: right;
+      text-decoration: none;
+      line-height: 1;
+
+      &:hover {
+        color: @link_hover;
+      }
+    }
+  }
+
+  // lines representing dropdown menu icon
+  .dropdown-line {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 6px;
+    margin-top: 6px;
+    background: @icon_color;
+  }
+}
+
+
+
+.pure-menu-item {
+}
 
 /** SVG Icons
 ---------------------*/
@@ -57,3 +233,50 @@
     width: 42px;
     height: 42px;
 }
+
+
+
+/** Player CSS
+---------------------*/
+.CTA {
+  width: 1366px;
+  height: 768px;
+}
+.INFINITY__JUMP_SMOKERS___RALPH_ROSARIO {
+  font-size: 47.878px;
+  font-family: "Gotham";
+  color: rgb(255, 255, 255);
+  line-height: 0.627;
+  -moz-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
+  -webkit-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
+  -ms-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
+}
+.NEW_SINGLE__WITH_REMIXES_BY {
+  font-size: 18px;
+  font-family: "Gotham";
+  color: rgb(72, 73, 74);
+  line-height: 1.667;
+  -moz-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
+  -webkit-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
+  -ms-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
+  position: absolute;
+}
+
+
+/** Logo CSS
+---------------------*/
+.Logo {
+  width: 1366px;
+  height: 768px;
+}
+.KATSOLAR_copy {
+  font-size: 185.969px;
+  font-family: "Gotham";
+  color: rgb(255, 255, 255);
+  line-height: 0.161;
+  -moz-transform: matrix( 0.99969491732259,0,0,1.00376137324272,0,0);
+  -webkit-transform: matrix( 0.99969491732259,0,0,1.00376137324272,0,0);
+  -ms-transform: matrix( 0.99969491732259,0,0,1.00376137324272,0,0);
+}
+
+

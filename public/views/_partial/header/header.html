@@ -1,0 +1,26 @@
+<div ng-controller="headerCtrl" class="container">
+  <nav role="navigation">
+    <ul class="nav-main" id="menu-items">
+      <!-- social icons TODO -->
+      <!-- social icons TODO -->
+      <!-- social icons TODO -->
+      <!-- social icons TODO -->
+      <!-- social icons TODO -->
+
+      <!-- dropdown -->
+      <li class="dropdown">
+        <a href="#">
+          <span class="dropdown-line"></span>
+          <span class="dropdown-line"></span>
+          <span class="dropdown-line"></span>
+        </a>
+        <!-- dropdown menu -->
+        <ul class="dropdown-menu">
+          <span class="diamond-icon"></span>
+          <li ng-repeat="page in pages"><a href="#/{{ page | lowercase }}">{{ page }}</a></li>
+        </ul>
+      </li> <!-- dropdown -->
+
+    </ul> <!-- menu items -->
+  </nav>
+</div>

@@ -5,15 +5,14 @@ var livereload = require('gulp-livereload');
 
 // compile less to css
 gulp.task('less', function() {
-  return gulp.src('./public/styles/main.less')
+  return gulp.src('public/styles/main.less')
           .pipe(less())
-          .pipe(gulp.dest('./public/styles/main.css'))
-          .pipe(livereload());
+          .pipe(gulp.dest('public/styles/', {force: true}));
 });
 
 // watch changes to less files
 gulp.task('watch', function() {
-  gulp.watch('./public/styles/*.less', ['less']);
+  gulp.watch('public/styles/*.less', ['less']);
 });
 
 // watch by default
