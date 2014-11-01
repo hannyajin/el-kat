@@ -1,10 +1,23 @@
 <div class="page-home cover-image"></div>
 <div class="page page-home">
 
-  <p>Home View</p>
+  <div class="pure-g">
+    <div class="pure-u-1-1">
+      <div class="page-content">
+        <div class="mplayer-text">{{ mplayer.intro }}</div>
+        <div class="mplayer-title">{{ mplayer.title }}</div>
+        <div class="mplayer-text">{{ mplayer.acknowledgments_intro }}</div>
+        <div ng-repeat="acknowledgment in mplayer.acknowledgments" class="mplayer-acknowledgment">{{ acknowledgment }}</div>
+      </div>
+    </div>
+  </div>
 
-  <div class="logo-container">
-    <img id="home-logo" src="img/homelogo.png">
+  <div class="pure-g">
+    <div class="pure-u-1-1">
+      <div class="logo-container">
+        <img id="home-logo" src="img/homelogo.png">
+      </div>
+    </div>
   </div>
 
 </div>

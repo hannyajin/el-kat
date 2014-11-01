@@ -26,8 +26,26 @@ app.factory('contentFactory', [function() {
     'main-bg.jpg', 'about-bg.jpg', 'music-bg.jpg', 'events-bg.jpg', 'review-bg.jpg'
   ];
 
+  var mplayer = {
+    intro: 'NEW SINGLE',
+    title: 'INFINITY',
+    acknowledgments_intro: 'WITH REMIXES BY',
+    acknowledgments: [
+      'JUMP SMOKERS &', 'RALPH ROSARIO'
+    ]
+  };
+
+  var socialLinks = {
+    youtube: 'https://youtube.com',
+    facebook: 'https://facebook.com',
+    twitter: 'https://twitter.com',
+    instagram: 'https://instagram.com'
+  };
+
   return {
     pages: pages,
-    bgImages: bgImages
+    bgImages: bgImages,
+    socialLinks: socialLinks,
+    mplayer: mplayer
   }
 }]);

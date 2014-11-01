@@ -51,6 +51,16 @@
 @press_title_color: #9c2ba9; // from press page
 @press_text_color: #1b0c18; // from press page
 
+@header_padding_top: 48px;
+@corner_padding: 48px;
+
+//@mplayer_text_shadow_color: #3366ff;
+//@mplayer_text_shadow_color: #b3c2f1;
+@mplayer_text_shadow_color: #a7baf1;
+@mplayer_text_shadow: @mplayer_text_shadow_color 0 0 25px;
+@mplayer_text_color: #48494a;
+@mplayer_special_color: #ffffff; // white
+
 
 /** Custom
 ---------------------*/
@@ -76,9 +86,33 @@ div#preload {
   display: block;
 }
 
+.mplayer-text {
+  font-size: 18px;
+  color: @mplayer_text_color;
+}
+.mplayer-title {
+  text-shadow: @mplayer_text_shadow, @mplayer_text_shadow;
+
+  color: @mplayer_special_color;
+  font-size: 48px;
+}
+.mplayer-acknowledgment {
+  text-shadow: @mplayer_text_shadow, @mplayer_text_shadow;
+  
+  //filter: glow(color=@mplayer_text_shadow_color, strength=3);
+
+  color: @mplayer_special_color;
+  font-size: 24px;
+}
+
 
 /** Pages
 ---------------------*/
+.page-content {
+  padding-left: @corner_padding;
+  padding-right: @corner_padding;
+}
+
 .logo-container {
   position: fixed;
   bottom: 20px;
@@ -89,11 +123,12 @@ div#preload {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 76%;
+  width: 90%;
   position: relative;
 }
 
 .cover-image {
+  z-index: -10;
   position: fixed;
   top: 0;
   left: 0;
@@ -135,28 +170,51 @@ header {
 }
 
 nav {
-  float: right;
+  z-index: 999;
   margin: 0;
   padding: 0;
-  padding-top: 48px;
+  padding-right: @corner_padding;
+  padding-top: @header_padding_top;
+}
+
+.icon-facebook {
+  margin-left: 8px;
+}
+
+.music-player-container {
+  z-index: 999;
+  float: left;
+  margin: 0;
+  padding: 0;
+  padding-top: @header_padding_top;
+  padding-left: @corner_padding;
+}
+
+nav li {
+  display: inline-block;
+  padding-left: 10px;
 }
 
 .nav-main {
   margin: 0;
+  float: right; // float navbar right
   padding: 0;
 }
 
+@dropdown_box_width: 120px;
+
 // dropdown menu
 .dropdown {
-  padding-right: 48px;
+  //padding-right: 48px;
+  margin: 0;
 
   .diamond-icon {
     background: url("../img/diamond.png") no-repeat;
-    background-position: 40px 0px;
+    background-position: (@dropdown_box_width - 32) 0px;
     display: block;
     width: 100%;
-    height: 9px;
     position: absolute;
+    height: 9px;
     top: 5px;
     overflow: hidden;
   }
@@ -172,7 +230,7 @@ nav {
     position: absolute;
     float: left;
     z-index: 1000;
-    min-width: 120px;
+    min-width: @dropdown_box_width;
     list-style: none;
     right: 0;
     padding-top: 12px;
@@ -205,14 +263,16 @@ nav {
   .dropdown-line {
     position: relative;
     display: block;
-    width: 40px;
+    width: 38px;
     height: 6px;
-    margin-top: 6px;
+    top: 2px;
+    margin-bottom: 7px;
     background: @icon_color;
   }
 }
 
-
+.menu-items {
+}
 
 .pure-menu-item {
 }
@@ -221,12 +281,17 @@ nav {
 ---------------------*/
 [class^="icon-"], [class*=" icon-"] {
     position: relative;
-    top: -3px;
+    top: 0px;
     display: block;
     color: #49aeef;
-    fill: currentColor;
+    fill: @icon_color;
+    width: 100%;
+    height: 100%;
 }
-.icon-facebook-square {
+.icon-youtube {
+  width: 84px;
+}
+.icon-facebook {
     width: 42px;
     height: 42px;
 }
@@ -238,50 +303,37 @@ nav {
     width: 42px;
     height: 42px;
 }
+.icon-mplayer {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+}
 
-
-
-/** Player CSS
+/** Special css for small screens (mobile phones).
 ---------------------*/
-.CTA {
-  width: 1366px;
-  height: 768px;
-}
-.INFINITY__JUMP_SMOKERS___RALPH_ROSARIO {
-  font-size: 47.878px;
-  font-family: "Gotham";
-  color: rgb(255, 255, 255);
-  line-height: 0.627;
-  -moz-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
-  -webkit-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
-  -ms-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
-}
-.NEW_SINGLE__WITH_REMIXES_BY {
-  font-size: 18px;
-  font-family: "Gotham";
-  color: rgb(72, 73, 74);
-  line-height: 1.667;
-  -moz-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
-  -webkit-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
-  -ms-transform: matrix( 1.00106738065149,0,0,1.00168235107845,0,0);
-  position: absolute;
-}
+@media screen and (max-width: 44.750em) {
+  // only concatenate navbar to 2 colums on small screens
+  .nav-inner-grid {
+    display: block !important;
+  }
 
+  nav, .page-content {
+    // don't pad on small screens
+    padding-right: 0px;
+  }
 
-/** Logo CSS
----------------------*/
-.Logo {
-  width: 1366px;
-  height: 768px;
-}
-.KATSOLAR_copy {
-  font-size: 185.969px;
-  font-family: "Gotham";
-  color: rgb(255, 255, 255);
-  line-height: 0.161;
-  -moz-transform: matrix( 0.99969491732259,0,0,1.00376137324272,0,0);
-  -webkit-transform: matrix( 0.99969491732259,0,0,1.00376137324272,0,0);
-  -ms-transform: matrix( 0.99969491732259,0,0,1.00376137324272,0,0);
-}
+  .music-player-container, .page-content {
+    padding-left: 0px;
+  }
 
+  // center icon on small screens (looks better)
+  .icon-mplayer {
+    padding: 20px 20px;
+  }
+
+  #home-logo {
+    width: 120%;
+    left: -10%;
+  }
+}
 

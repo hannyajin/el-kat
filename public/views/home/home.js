@@ -10,6 +10,6 @@ angular.module('app.home', ['ngRoute'])
     });
 }])
 
-.controller('homeCtrl', [function() {
-
+.controller('homeCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
+  $scope.mplayer = contentFactory.mplayer;
 }]);

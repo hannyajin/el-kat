@@ -3,6 +3,7 @@
 angular.module('app')
 .controller('headerCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
   $scope.pages = contentFactory.pages;
+  $scope.socialLinks = contentFactory.socialLinks;
 }]);
 
 /* deprecated
