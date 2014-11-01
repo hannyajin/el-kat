@@ -10,6 +10,6 @@ angular.module('app.music', ['ngRoute'])
     });
 }])
 
-.controller('musicCtrl', [function() {
-
+.controller('musicCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
+  $scope.music = contentFactory.music;
 }]);

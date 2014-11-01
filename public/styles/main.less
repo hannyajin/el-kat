@@ -62,12 +62,40 @@
 @mplayer_special_color: #ffffff; // white
 
 
+/** Fonts
+---------------------*/
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('../fonts/Gotham-Bold.ttf');
+}
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('../fonts/Gotham-Book.ttf');
+}
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url('../fonts/Gotham-Light.ttf');
+}
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('../fonts/Gotham-Medium.ttf');
+}
+@font-face {
+  font-family: 'Gotham-Thin';
+  src: url('../fonts/Gotham-Thin.ttf');
+}
+@font-face {
+  font-family: 'Gotham-XLight';
+  src: url('../fonts/Gotham-XLight.ttf');
+}
+
 /** Custom
 ---------------------*/
 html, body {
   height: 100%;
   margin: 0;
   overflow: hidden !important;
+  font-family: 'arial, Gotham-Light'
 }
 
 // preload images
@@ -87,22 +115,23 @@ div#preload {
 }
 
 .mplayer-text {
-  font-size: 18px;
+  font-family: 'Gotham-Light';
+  font-size: 1em;
   color: @mplayer_text_color;
 }
 .mplayer-title {
-  text-shadow: @mplayer_text_shadow, @mplayer_text_shadow;
-
-  color: @mplayer_special_color;
+  font-family: 'Gotham-Light';
   font-size: 48px;
+  color: @mplayer_special_color;
+  text-shadow: @mplayer_text_shadow, @mplayer_text_shadow, @mplayer_text_shadow;
 }
 .mplayer-acknowledgment {
-  text-shadow: @mplayer_text_shadow, @mplayer_text_shadow;
-  
-  //filter: glow(color=@mplayer_text_shadow_color, strength=3);
+  line-height: 100%;
+  font-family: 'Gotham-Thin';
+  font-size: 1.3em;
 
   color: @mplayer_special_color;
-  font-size: 24px;
+  text-shadow: @mplayer_text_shadow, @mplayer_text_shadow, @mplayer_text_shadow;
 }
 
 
@@ -115,7 +144,7 @@ div#preload {
 
 .logo-container {
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   width: 100%;
 }
 
@@ -123,7 +152,7 @@ div#preload {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 78%;
   position: relative;
 }
 
@@ -159,6 +188,58 @@ div#preload {
 }
 .page-videos.cover-image {
   background: url('../img/videos-bg.jpg') no-repeat center top;
+}
+
+
+/** About page
+---------------------*/
+img.about-title {
+  width: 55%;
+  padding-top: 3em;
+  padding-bottom: 1em;
+}
+
+.about-text {
+  //padding-left: 2%; glow fix
+  padding-top: 1em; // new paragraph
+  padding-right: 14%;
+  font-size: 1em;
+  color: @about_text_color;
+  font-weight: 400;
+}
+
+/** Music Page
+---------------------*/
+.page-music {
+  .page-content {
+    margin: 0;
+    padding-top: 5%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.music-cover {
+  display: inline-table;
+  text-align: center;
+  width: 25%;
+  padding-right: 5%;
+  padding-top: .5em;
+
+  img {
+    width: 100%;
+  }
+}
+
+.music-title {
+  padding-top: .5em;
+  font-size: .75em;
+  font-weight: bold;
+
+}
+
+.music-other {
+  font-size: 0.5em;
 }
 
 /** Navigation
@@ -331,9 +412,70 @@ nav li {
     padding: 20px 20px;
   }
 
-  #home-logo {
-    width: 120%;
-    left: -10%;
+  .logo-container {
+    bottom: -10px;
   }
-}
+
+  #home-logo {
+    //width: 120%;
+    //left: -10%;
+    width: 106%;
+    left: -3%;
+  }
+
+
+  /* Small About Page
+  --------------------*/
+  img.about-title {
+    width: 95%;
+    padding-top: 2em;
+    padding-bottom: 0em;
+  }
+
+  .about-text {
+    //padding-left: 2%; glow fix
+    padding-top: 1em; // new paragraph
+    padding-right: 3%;
+    font-size: 1em;
+    color: @about_text_color;
+    font-weight: 400;
+  }
+
+  /* Small Music Page
+  --------------------*/
+
+  .page-music {
+    .page-content {
+      margin: 0;
+      padding-top: 5%;
+    }
+  }
+
+  .music-cover {
+    display: inline-table;
+    text-align: center;
+    width: 40%;
+    padding-right: 5%;
+    padding-top: .5em;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .music-title {
+    padding-top: .5em;
+    font-size: .75em;
+    font-weight: bold;
+
+  }
+
+  .music-other {
+    font-size: 0.5em;
+  }
+
+
+
+} // small screen
+
 

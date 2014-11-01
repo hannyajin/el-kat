@@ -10,6 +10,6 @@ angular.module('app.about', ['ngRoute'])
     });
 }])
 
-.controller('aboutCtrl', [function() {
-
+.controller('aboutCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
+  $scope.about = contentFactory.about;
 }]);
