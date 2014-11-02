@@ -6,7 +6,7 @@ angular.module('app')
   $scope.socialLinks = contentFactory.socialLinks;
 
 
-  angular.element(document).ready(function() {
+  $scope.$on('$viewContentLoaded', function() {
     var widgetIframe = $('#sc-widget')[0];
     var widget = SC.Widget( widgetIframe );
 
