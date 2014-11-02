@@ -2,10 +2,12 @@ var gulp = require('gulp');
 var less = require('gulp-less');
 var watch = require('gulp-watch');
 var livereload = require('gulp-livereload');
+var plumber = require('gulp-plumber');
 
 // compile less to css
 gulp.task('less', function() {
   return gulp.src('public/styles/main.less')
+          .pipe(plumber())
           .pipe(less())
           .pipe(gulp.dest('public/styles/', {force: true}));
 });

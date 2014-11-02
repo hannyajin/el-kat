@@ -10,6 +10,6 @@ angular.module('app.videos', ['ngRoute'])
     });
 }])
 
-.controller('videosCtrl', [function() {
-
+.controller('videosCtrl', ['contentFactory', '$scope', function(cf, $scope) {
+  $scope.video = cf.pages.video;
 }]);

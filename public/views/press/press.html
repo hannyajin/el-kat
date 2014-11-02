@@ -1,6 +1,22 @@
 <div class="page-press cover-image"></div>
 <div class="page page-press">
 
-  <p>Press View</p>
+  <div class="page-content">
+    <div class="press-cover" ng-repeat="item in press.items">
+      <table>
+        <td>
+          <div class="press-image">
+            <img class="pure-image" ng-src="{{ item.src }}">
+          </div>
+        </td>
+        <td>
+          <div class="press-text-container">
+            <div class="press-title">{{ item.title }}</div>
+            <div class="press-text">{{ item.text }}</div>
+          </div>
+        </td>
+      </table>
+    </div>
+  </div>
 
 </div>

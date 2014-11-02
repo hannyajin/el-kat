@@ -1,1 +1,412 @@
-@font-face{font-family:'Gotham-Bold';src:url('../fonts/Gotham-Bold.ttf')}@font-face{font-family:'Gotham-Book';src:url('../fonts/Gotham-Book.ttf')}@font-face{font-family:'Gotham-Light';src:url('../fonts/Gotham-Light.ttf')}@font-face{font-family:'Gotham-Medium';src:url('../fonts/Gotham-Medium.ttf')}@font-face{font-family:'Gotham-Thin';src:url('../fonts/Gotham-Thin.ttf')}@font-face{font-family:'Gotham-XLight';src:url('../fonts/Gotham-XLight.ttf')}html,body{height:100%;margin:0;overflow:hidden !important;font-family:'arial, Gotham-Light'}div#preload{display:none}.mplayer-icon{background:url("../img/mplayer_icon.png") no-repeat;display:block;width:100%}.music-player p{display:block}.mplayer-text{font-family:'Gotham-Light';font-size:1em;color:#48494a}.mplayer-title{font-family:'Gotham-Light';font-size:48px;color:#fff;text-shadow:#a7baf1 0 0 25px,#a7baf1 0 0 25px,#a7baf1 0 0 25px}.mplayer-acknowledgment{line-height:100%;font-family:'Gotham-Thin';font-size:1.3em;color:#fff;text-shadow:#a7baf1 0 0 25px,#a7baf1 0 0 25px,#a7baf1 0 0 25px}.page-content{padding-left:48px;padding-right:48px}.logo-container{position:fixed;bottom:10px;width:100%}#home-logo{display:block;margin-left:auto;margin-right:auto;width:78%;position:relative}.cover-image{z-index:-10;position:fixed;top:0;left:0;width:100%;height:100%;-webkit-background-size:cover !important;-moz-background-size:cover !important;-o-background-size:cover !important;background-size:cover !important;z-index:-1000 !important;min-height:100%;margin:0;padding:0}.page-home.cover-image{background:url('../img/main-bg.jpg') no-repeat center top}.page-about.cover-image{background:url('../img/about-bg.jpg') no-repeat center top}.page-events.cover-image{background:url('../img/events-bg.jpg') no-repeat center top}.page-music.cover-image{background:url('../img/music-bg.jpg') no-repeat center top}.page-press.cover-image{background:url('../img/press-bg.jpg') no-repeat center top}.page-videos.cover-image{background:url('../img/videos-bg.jpg') no-repeat center top}img.about-title{width:55%;padding-top:3em;padding-bottom:1em}.about-text{padding-top:1em;padding-right:14%;font-size:1em;color:#4c3147;font-weight:400}.page-music .page-content{margin:0;padding-top:5%;padding-left:0;padding-right:0}.music-cover{display:inline-table;text-align:center;width:25%;padding-right:5%;padding-top:.5em}.music-cover img{width:100%}.music-title{padding-top:.5em;font-size:.75em;font-weight:bold}.music-other{font-size:0.5em}header{top:0;left:0}nav{z-index:999;margin:0;padding:0;padding-right:48px;padding-top:48px}.icon-facebook{margin-left:8px}.music-player-container{z-index:999;float:left;margin:0;padding:0;padding-top:48px;padding-left:48px}nav li{display:inline-block;padding-left:10px}.nav-main{margin:0;float:right;padding:0}.dropdown{margin:0;position:relative}.dropdown .diamond-icon{background:url("../img/diamond.png") no-repeat;background-position:88px 0;display:block;width:100%;position:absolute;height:9px;top:5px;overflow:hidden}.dropdown:hover .dropdown-menu{display:block}.dropdown .dropdown-menu{display:none;position:absolute;float:left;z-index:1000;min-width:120px;list-style:none;right:0;padding-top:12px;margin:0}.dropdown .dropdown-menu:hover{display:block}.dropdown .dropdown-menu li{display:block}.dropdown .dropdown-menu a{display:block;padding:8px 20px;color:#fff;background-color:#49aeef;text-align:right;text-decoration:none;line-height:1}.dropdown .dropdown-menu a:hover{color:#e8e8e8}.dropdown .dropdown-line{position:relative;display:block;width:38px;height:6px;top:2px;margin-bottom:7px;background:#49aeef}[class^="icon-"],[class*=" icon-"]{position:relative;top:0px;display:block;color:#49aeef;fill:#49aeef;width:100%;height:100%}.icon-youtube{width:84px}.icon-facebook{width:42px;height:42px}.icon-twitter{width:39px;height:42px}.icon-instagram{width:42px;height:42px}.icon-mplayer{margin:0;width:40px;height:40px}@media screen and (max-width:44.75em){.nav-inner-grid{display:block !important}nav,.page-content{padding-right:0px}.music-player-container,.page-content{padding-left:0px}.icon-mplayer{padding:20px 20px}.logo-container{bottom:-10px}#home-logo{width:106%;left:-3%}img.about-title{width:95%;padding-top:2em;padding-bottom:0em}.about-text{padding-top:1em;padding-right:3%;font-size:1em;color:#4c3147;font-weight:400}.page-music .page-content{margin:0;padding-top:5%}.music-cover{display:inline-table;text-align:center;width:40%;padding-right:5%;padding-top:.5em}.music-cover img{width:100%}.music-title{padding-top:.5em;font-size:.75em;font-weight:bold}.music-other{font-size:0.5em}}
+/** Less mixins
+---------------------*/
+/** Less
+---------------------*/
+/** Fonts
+---------------------*/
+@font-face {
+  font-family: 'Gotham-Bold';
+  src: url('../fonts/Gotham-Bold.ttf');
+}
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('../fonts/Gotham-Book.ttf');
+}
+@font-face {
+  font-family: 'Gotham-Light';
+  src: url('../fonts/Gotham-Light.ttf');
+}
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url('../fonts/Gotham-Medium.ttf');
+}
+@font-face {
+  font-family: 'Gotham-Thin';
+  src: url('../fonts/Gotham-Thin.ttf');
+}
+@font-face {
+  font-family: 'Gotham-XLight';
+  src: url('../fonts/Gotham-XLight.ttf');
+}
+@font-face {
+  font-family: 'Arial Regular';
+  src: url('../fonts/ARIAL.TTF');
+}
+@font-face {
+  font-family: 'Arial Bold';
+  src: url('../fonts/ARIALBD.TTF');
+}
+/** Custom
+---------------------*/
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden !important;
+  font-family: 'Arial Regular';
+}
+div#preload {
+  display: none;
+}
+/** Mplayer, music player
+---------------------*/
+.mplayer-icon {
+  background: url("../img/mplayer_icon.png") no-repeat;
+  display: block;
+  width: 100%;
+}
+.music-player p {
+  display: block;
+}
+.mplayer-text {
+  font-family: 'Gotham-Light';
+  font-size: 1em;
+  color: #48494a;
+}
+.mplayer-title {
+  font-family: 'Gotham-Light';
+  font-size: 48px;
+  color: #ffffff;
+  text-shadow: #a7baf1 0 0 25px, #a7baf1 0 0 25px, #a7baf1 0 0 25px;
+}
+.mplayer-acknowledgment {
+  line-height: 100%;
+  font-family: 'Gotham-Thin';
+  font-size: 1.3em;
+  color: #ffffff;
+  text-shadow: #a7baf1 0 0 25px, #a7baf1 0 0 25px, #a7baf1 0 0 25px;
+}
+/** Pages
+---------------------*/
+.page-content {
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.logo-container {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+}
+#home-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 78%;
+  position: relative;
+}
+.cover-image {
+  z-index: -10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  z-index: -1000 !important;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.page-home.cover-image {
+  background: url('../img/main-bg.jpg') no-repeat center top;
+}
+.page-about.cover-image {
+  background: url('../img/about-bg.jpg') no-repeat center top;
+}
+.page-events.cover-image {
+  background: url('../img/events-bg.jpg') no-repeat center top;
+}
+.page-music.cover-image {
+  background: url('../img/music-bg.jpg') no-repeat center top;
+}
+.page-press.cover-image {
+  background: url('../img/press-bg.jpg') no-repeat center top;
+}
+.page-videos.cover-image {
+  background: url('../img/videos-bg.jpg') no-repeat center top;
+}
+/** About page
+---------------------*/
+img.about-title {
+  width: 55%;
+  padding-top: 3em;
+  padding-bottom: 1em;
+}
+.about-text {
+  padding-top: 1em;
+  padding-right: 14%;
+  font-size: 1em;
+  color: #4c3147;
+  font-weight: 400;
+}
+/** Music Page
+---------------------*/
+.page-music .page-content {
+  margin: 0;
+  padding-top: 5%;
+  padding-left: 0;
+  padding-right: 0;
+}
+.music-cover {
+  display: inline-table;
+  text-align: center;
+  width: 25%;
+  padding-right: 5%;
+  padding-top: .5em;
+}
+.music-cover img {
+  width: 100%;
+}
+.music-title {
+  padding-top: .5em;
+  font-size: .75em;
+  font-weight: bold;
+}
+.music-other {
+  font-size: 0.5em;
+}
+/** Press Page
+---------------------*/
+.page-press .page-content {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 75px;
+}
+.press-cover {
+  padding-left: 33%;
+  display: inline-table;
+  padding-top: 25px;
+}
+.press-cover .press-image {
+  width: 200px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.press-cover .press-image img {
+  float: right;
+}
+.press-cover .press-text-container {
+  text-align: left;
+  padding-left: 28px;
+}
+.press-cover .press-text-container .press-title {
+  padding-top: .5em;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Arial Bold' !important;
+  color: #9c2ba9;
+}
+.press-cover .press-text-container .press-text {
+  max-width: 600px;
+  font-size: 18px;
+  font-family: 'Arial Regular' !important;
+  color: #1b0c18;
+}
+/** Video Page
+---------------------*/
+.page-videos .page-content {
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 45px;
+}
+.video-content {
+  padding-top: 25px;
+}
+.video-content iframe {
+  z-index: 99999;
+}
+/** Navigation
+---------------------*/
+header {
+  top: 0;
+  left: 0;
+}
+nav {
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  padding-right: 48px;
+  padding-top: 48px;
+}
+.icon-facebook {
+  margin-left: 8px;
+}
+.music-player-container {
+  z-index: 999;
+  float: left;
+  margin: 0;
+  padding: 0;
+  padding-top: 48px;
+  padding-left: 48px;
+}
+nav li {
+  display: inline-block;
+  padding-left: 10px;
+}
+.nav-main {
+  margin: 0;
+  float: right;
+  padding: 0;
+}
+.dropdown {
+  margin: 0;
+  position: relative;
+}
+.dropdown .diamond-icon {
+  background: url("../img/diamond.png") no-repeat;
+  background-position: 88px 0px;
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 9px;
+  top: 5px;
+  overflow: hidden;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  float: left;
+  z-index: 1000;
+  min-width: 120px;
+  list-style: none;
+  right: 0;
+  padding-top: 12px;
+  margin: 0;
+}
+.dropdown .dropdown-menu:hover {
+  display: block;
+}
+.dropdown .dropdown-menu li {
+  display: block;
+}
+.dropdown .dropdown-menu a {
+  display: block;
+  padding: 8px 20px;
+  color: #ffffff;
+  background-color: #49aeef;
+  text-align: right;
+  text-decoration: none;
+  line-height: 1;
+}
+.dropdown .dropdown-menu a:hover {
+  color: #e8e8e8;
+}
+.dropdown .dropdown-line {
+  position: relative;
+  display: block;
+  width: 38px;
+  height: 6px;
+  top: 2px;
+  margin-bottom: 7px;
+  background: #49aeef;
+}
+/** SVG Icons
+---------------------*/
+[class^="icon-"],
+[class*=" icon-"] {
+  position: relative;
+  top: 0px;
+  display: block;
+  color: #49aeef;
+  fill: #49aeef;
+  width: 42px;
+  height: 42px;
+}
+.icon-youtube {
+  width: 84px;
+  height: 42px;
+}
+.icon-facebook {
+  width: 42px;
+  height: 42px;
+}
+.icon-twitter {
+  width: 39px;
+  height: 42px;
+}
+.icon-instagram {
+  width: 42px;
+  height: 42px;
+}
+.icon-mplayer {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+}
+/** Special css for small screens (mobile phones).
+---------------------*/
+@media screen and (max-width: 44.75em) {
+  .nav-inner-grid {
+    display: block !important;
+  }
+  nav,
+  .page-content {
+    padding-right: 0px;
+  }
+  .music-player-container,
+  .page-content {
+    padding-left: 0px;
+  }
+  .icon-mplayer {
+    padding: 20px 20px;
+  }
+  .logo-container {
+    bottom: -10px;
+  }
+  #home-logo {
+    width: 106%;
+    left: -3%;
+  }
+  /* Small About Page
+  --------------------*/
+  img.about-title {
+    width: 95%;
+    padding-top: 2em;
+    padding-bottom: 0em;
+  }
+  .about-text {
+    padding-top: 1em;
+    padding-right: 3%;
+    font-size: 1em;
+    color: #4c3147;
+    font-weight: 400;
+  }
+  /* Small Music Page
+  --------------------*/
+  .page-music .page-content {
+    margin: 0;
+    padding-top: 5%;
+  }
+  .music-cover {
+    display: inline-table;
+    text-align: center;
+    width: 40%;
+    padding-right: 5%;
+    padding-top: .5em;
+  }
+  .music-cover img {
+    width: 100%;
+  }
+  .music-title {
+    padding-top: .5em;
+    font-size: .75em;
+    font-weight: bold;
+  }
+  .music-other {
+    font-size: 0.5em;
+  }
+  /* Small Press Page
+  --------------------*/
+  .press-cover {
+    padding-left: 0%;
+  }
+}

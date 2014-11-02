@@ -1,6 +1,32 @@
 <div class="page-videos cover-image"></div>
 <div class="page page-videos">
 
-  <p>Videos View</p>
+  <div class="pure-g">
+    <div class="pure-u-1-2">
+    </div>
+
+    <div class="pure-u-1-2">
+      <div class="page-content">
+
+        <div class="video-content" ng-repeat="video in video.list">
+
+            <!--
+          <div id="video_container">
+            <video id="video_id" src="" width="780px" height="440px" class="video-js vjs-default-skin" controls preload="auto" data-setup='{ "techOrder": ["youtube"], "src": "http://www.youtube.com/embed/1CH76F1mFis" }'></video>
+          </div>
+            -->
+
+          <!--
+            <iframe src="{{video.url | trustAsResourceUrl}}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+          -->
+
+          <div>
+            <iframe width="560" height="315" src="//www.youtube.com/embed/JN98cyvFaXA" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div> <!-- pure-g -->
 
 </div>

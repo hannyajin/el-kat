@@ -2,7 +2,7 @@
 
 angular.module('app')
 .controller('headerCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
-  $scope.pages = contentFactory.pages;
+  $scope.navLinks = contentFactory.navLinks;
   $scope.socialLinks = contentFactory.socialLinks;
 }]);
 

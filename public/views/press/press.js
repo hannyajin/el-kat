@@ -10,6 +10,6 @@ angular.module('app.press', ['ngRoute'])
     });
 }])
 
-.controller('pressCtrl', [function() {
-
+.controller('pressCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
+  $scope.press = contentFactory.pages.press;
 }]);

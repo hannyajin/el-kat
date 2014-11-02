@@ -9,14 +9,14 @@
       <div class="page-content">
 
         <div class="music-cover" ng-repeat="cover in music.covers">
-          <img class="pure-img" src="{{ cover.src }}">
+          <img class="pure-img" ng-src="{{ cover.src }}">
           <div class="music-title">{{ cover.title }}</div>
           <div class="music-other">{{ cover.other }}</div>
         </div>
 
       </div>
     </div>
-  </div>
+  </div> <!-- pure-g -->
 
 
 </div>
