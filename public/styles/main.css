@@ -218,9 +218,6 @@ img.about-title {
 .video-content {
   padding-top: 25px;
 }
-.video-content iframe {
-  z-index: 99999;
-}
 /** Navigation
 ---------------------*/
 header {

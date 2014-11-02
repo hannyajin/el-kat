@@ -90,10 +90,10 @@ app.factory('contentFactory', [function() {
 
   var video = {
     list: [{
-      url: 'http://www.youtube.com/embed/JN98cyvFaXA',
+      url: '//www.youtube.com/embed/JN98cyvFaXA',
       id: 'JN98cyvFaXA'
     },{
-      url: 'http://www.youtube.com/embed/TW_K4xFT40Y',
+      url: '//www.youtube.com/embed/TW_K4xFT40Y',
       id: 'TW_K4xFT40Y'
     }]
   };
