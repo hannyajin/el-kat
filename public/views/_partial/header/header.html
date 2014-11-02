@@ -22,6 +22,11 @@
   C37.68,12.991,37.008,12.319,36.18,12.319z M19.665,32.286l-0.072-14.52l11.113,7.205L19.665,32.286z" />
       </symbol>
 
+      <symbol id="icon-mplayer-pause" viewBox="0 0 16 16">
+        <title>music player</title>
+        <path d="m8,0c-4.418,0-8,3.582-8,8s3.582,8 8,8 8-3.582 8-8-3.582-8-8-8zm-1,12h-2v-4-4h2v8zm4,0h-2v-4-4h2v8z" />
+      </symbol>
+
     </defs>
   </svg>
 
@@ -29,13 +34,16 @@
   <div class="pure-u-1-2">
     <div class="music-player-container">
       
-      <svg class="icon-mplayer">
-        <use xlink:href="#icon-mplayer"></use>
-      </svg>
+      <div id="icon-mplayer-button-id">
+        <svg class="icon-mplayer" id="icon-mplayer-id">
+          <use xlink:href="#icon-mplayer"></use>
+        </svg>
+        <svg class="icon-mplayer" style="display: none;" id="icon-mplayer-pause-id">
+          <use xlink:href="#icon-mplayer-pause"></use>
+        </svg>
+      </div>
 
-      <!--
-      <iframe id="sc-widget" width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2F"></iframe>
-    -->
+      <iframe id="sc-widget" width="0%" height="0%" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2F"></iframe>
     </div>
   </div>
 

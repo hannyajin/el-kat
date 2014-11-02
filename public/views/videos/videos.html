@@ -15,12 +15,15 @@
             <video id="video_id" src="" width="780px" height="440px" class="video-js vjs-default-skin" controls preload="auto" data-setup='{ "techOrder": ["youtube"], "src": "http://www.youtube.com/embed/1CH76F1mFis" }'></video>
           </div>
             -->
-
-            <iframe src="{{ ('//www.youtube.com/embed/' + video.id) | trustAsResourceUrl}}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            <div ng-init="alert('Hello');">
+              <iframe ng-src="{{ ('//www.youtube.com/embed/' + video.id) | trustAsResourceUrl}}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+            </div>
           <!--
           <youtube-video video-url="video.url"></youtube-video>
           -->
           
+
+
           <!--
           <div>
             <iframe width="560" height="315" src="//www.youtube.com/embed/JN98cyvFaXA" frameborder="0" allowfullscreen></iframe>

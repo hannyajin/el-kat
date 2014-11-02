@@ -31,6 +31,10 @@ app.factory('contentFactory', [function() {
     text: '© KAT SOLAR 2014'
   };
 
+  var single = {
+    url: "https://soundcloud.com/katsolar/remix-right-here-indoor-storm"
+  }
+
   // social links
   var socialLinks = {
     youtube: 'https://youtube.com',
@@ -162,6 +166,7 @@ app.factory('contentFactory', [function() {
     mplayer: mplayer,
     music: music,
     about: about,
+    single: single,
 
     pages: {
       music: music,
@@ -170,4 +175,5 @@ app.factory('contentFactory', [function() {
       video: video
     }
   }
-}]);
+}]); // app factory
+
