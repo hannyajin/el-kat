@@ -290,7 +290,7 @@ img.about-title {
     padding-left: 28px;
 
     .press-title {
-      padding-top: .5em;
+      padding-top: 8px;
       font-size: 20px;
       font-weight: bold;
       font-family: 'Arial Bold' !important;
@@ -561,6 +561,38 @@ nav li {
   --------------------*/
   .press-cover {
     padding-left: 0%;
+
+    .press-image {
+      width: 50px;
+      height: auto;
+      margin: 0;
+      padding: 0;
+
+      img {
+        float: right;
+        width: 100%;
+      }
+    }
+
+    .press-text-container {
+      text-align: left;
+      padding-left: 5px;
+
+      .press-title {
+        padding-top: 8px;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'Arial Bold' !important;
+        color: @press_title_color;
+      }
+
+      .press-text {
+        max-width: 600px;
+        font-size: 13px;
+        font-family: 'Arial Regular' !important;
+        color: @press_text_color;
+      }
+    }
   }
 
 

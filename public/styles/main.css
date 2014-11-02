@@ -198,7 +198,7 @@ img.about-title {
   padding-left: 28px;
 }
 .press-cover .press-text-container .press-title {
-  padding-top: .5em;
+  padding-top: 8px;
   font-size: 20px;
   font-weight: bold;
   font-family: 'Arial Bold' !important;
@@ -408,5 +408,32 @@ nav li {
   --------------------*/
   .press-cover {
     padding-left: 0%;
+  }
+  .press-cover .press-image {
+    width: 50px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+  .press-cover .press-image img {
+    float: right;
+    width: 100%;
+  }
+  .press-cover .press-text-container {
+    text-align: left;
+    padding-left: 5px;
+  }
+  .press-cover .press-text-container .press-title {
+    padding-top: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Arial Bold' !important;
+    color: #9c2ba9;
+  }
+  .press-cover .press-text-container .press-text {
+    max-width: 600px;
+    font-size: 13px;
+    font-family: 'Arial Regular' !important;
+    color: #1b0c18;
   }
 }

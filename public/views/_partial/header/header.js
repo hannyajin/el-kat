@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app')
+var app = angular.module('app')
 .controller('headerCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
   $scope.navLinks = contentFactory.navLinks;
   $scope.socialLinks = contentFactory.socialLinks;
@@ -29,6 +29,8 @@ angular.module('app')
     var _pause = $('#icon-mplayer-pause-id');
 
     var playbutton = $('#icon-mplayer-button-id');
+
+    /*
     playbutton.on('click', function() {
       console.log("---- CLICK ----");
 
@@ -44,6 +46,7 @@ angular.module('app')
         }
       });
     }); // playbutton
+*/
 
     window._SCW = widget;
 
@@ -51,5 +54,34 @@ angular.module('app')
 
   }); // on document ready
 
-}]);
+}])
 
+
+
+.directive('mplayButton', [function() {
+  console.log("In Directive");
+
+  var widgetIframe = $('#sc-widget')[0];
+  var widget = SC.Widget( widgetIframe );
+
+  var _play = $('#icon-mplayer-id');
+  var _pause = $('#icon-mplayer-pause-id');
+
+  return function(scope, element, attr) {
+    element.on('click', function() {
+      console.log("---- DIR CLICK ----");
+
+      widget.isPaused(function(paused) {
+        if (paused) {
+          widget.play();
+          _play.slideUp();
+          _pause.slideDown();
+        } else {
+          widget.pause();
+          _pause.slideUp();
+          _play.slideDown();
+        }
+      });
+    });
+  };
+}]);
