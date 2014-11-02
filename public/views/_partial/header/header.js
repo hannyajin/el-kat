@@ -6,7 +6,7 @@ angular.module('app')
   $scope.socialLinks = contentFactory.socialLinks;
 
 
-  $(function() {
+  angular.element(document).ready(function() {
     var widgetIframe = $('#sc-widget')[0];
     var widget = SC.Widget( widgetIframe );
 
@@ -45,7 +45,7 @@ angular.module('app')
 
     window._SCW = widget;
 
-  }); // auto anon fn
+  }); // on document ready
 
 }]);
 
