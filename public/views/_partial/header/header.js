@@ -30,6 +30,8 @@ angular.module('app')
 
     var playbutton = $('#icon-mplayer-button-id');
     playbutton.on('click', function() {
+      console.log("---- CLICK ----");
+
       widget.isPaused(function(paused) {
         if (paused) {
           widget.play();
@@ -44,6 +46,8 @@ angular.module('app')
     });
 
     window._SCW = widget;
+
+    console.log("---- ANGULAR DOCUMENT READY ----");
 
   }); // on document ready
 
