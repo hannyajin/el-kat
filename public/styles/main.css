@@ -240,6 +240,9 @@ nav {
 .icon-facebook {
   margin-left: 8px;
 }
+body {
+  min-width: 400px;
+}
 .music-player-container {
   z-index: 999;
   float: left;
@@ -254,8 +257,12 @@ nav li {
 }
 .nav-main {
   margin: 0;
-  float: right;
   padding: 0;
+  float: right;
+}
+.bot-nav-group,
+.top-nav-group {
+  float: left;
 }
 .dropdown {
   margin: 0;
@@ -349,7 +356,7 @@ nav li {
 }
 /** Special css for small screens (mobile phones).
 ---------------------*/
-@media screen and (max-width: 44.75em) {
+@media screen and (max-width: 540px) {
   .top-nav-group {
     float: right;
     margin: 0;
@@ -358,6 +365,8 @@ nav li {
     float: right;
     padding-top: 10px;
   }
+}
+@media screen and (max-width: 44.75em) {
   .nav-inner-grid {
     display: block !important;
   }

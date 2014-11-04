@@ -354,6 +354,10 @@ nav {
   margin-left: 8px;
 }
 
+body {
+  min-width: 400px;
+}
+
 .music-player-container {
   z-index: 999;
   float: left;
@@ -370,8 +374,15 @@ nav li {
 
 .nav-main {
   margin: 0;
-  float: right; // float navbar right
   padding: 0;
+  float: right
+}
+
+.main-nav-group {
+}
+
+.bot-nav-group, .top-nav-group {
+  float: left;
 }
 
 @dropdown_box_width: 120px;
@@ -491,7 +502,7 @@ nav li {
 
 /** Special css for small screens (mobile phones).
 ---------------------*/
-@media screen and (max-width: 44.750em) {
+@media screen and (max-width: 540px) {
 
   .top-nav-group {
     float: right;
@@ -501,9 +512,9 @@ nav li {
     float: right;
     padding-top: 10px;
   }
+}
 
-
-
+@media screen and (max-width: 44.750em) {
   // only concatenate navbar to 2 colums on small screens
   .nav-inner-grid {
     display: block !important;
