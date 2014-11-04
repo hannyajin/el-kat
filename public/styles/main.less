@@ -58,8 +58,11 @@
 
 //@mplayer_text_shadow_color: #3366ff;
 //@mplayer_text_shadow_color: #b3c2f1;
-@mplayer_text_shadow_color: #a7baf1;
-@mplayer_text_shadow: @mplayer_text_shadow_color 0 0 25px;
+//@mplayer_text_shadow_color: #2f7bf9;
+//@mplayer_text_shadow_color: rgba(47, 123, 249, 0.75);
+@mplayer_text_shadow_color: rgba(166, 198, 238, 0.75);
+//@mplayer_text_shadow_color: #a7baf1;
+@mplayer_text_shadow: 0px 0px 25px @mplayer_text_shadow_color ;
 @mplayer_text_color: #48494a;
 @mplayer_special_color: #ffffff; // white
 
@@ -129,24 +132,28 @@ div#preload {
   display: block;
 }
 
+.mplayer-text-intro {
+  padding-top: 10px;
+}
+
 .mplayer-text {
-  font-family: 'Gotham-Light';
-  font-size: 1em;
+  font-family: 'Gotham-Book';
+  font-size: 1.1em;
   color: @mplayer_text_color;
 }
 .mplayer-title {
-  font-family: 'Gotham-Light';
-  font-size: 48px;
+  font-family: 'Gotham-Book';
+  font-size: 54px;
   color: @mplayer_special_color;
-  text-shadow: @mplayer_text_shadow, @mplayer_text_shadow, @mplayer_text_shadow;
+  text-shadow: @mplayer_text_shadow,  @mplayer_text_shadow;
 }
 .mplayer-acknowledgment {
   line-height: 100%;
-  font-family: 'Gotham-Thin';
-  font-size: 1.3em;
+  font-family: 'Gotham-Light';
+  font-size: 1.6em;
 
   color: @mplayer_special_color;
-  text-shadow: @mplayer_text_shadow, @mplayer_text_shadow, @mplayer_text_shadow;
+  text-shadow: @mplayer_text_shadow,  @mplayer_text_shadow;
 }
 
 
@@ -327,6 +334,9 @@ img.about-title {
 /** Navigation
 ---------------------*/
 
+.icons {
+}
+
 header {
   top: 0;
   left: 0;
@@ -440,6 +450,12 @@ nav li {
 .pure-menu-item {
 }
 
+/** PNG Icons
+---------------------*/
+nav li {
+}
+
+
 /** SVG Icons
 ---------------------*/
 [class^="icon-"], [class*=" icon-"] {
@@ -476,6 +492,18 @@ nav li {
 /** Special css for small screens (mobile phones).
 ---------------------*/
 @media screen and (max-width: 44.750em) {
+
+  .top-nav-group {
+    float: right;
+    margin: 0;
+  }
+  .bot-nav-group {
+    float: right;
+    padding-top: 10px;
+  }
+
+
+
   // only concatenate navbar to 2 colums on small screens
   .nav-inner-grid {
     display: block !important;
