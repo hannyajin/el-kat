@@ -42,7 +42,6 @@ html,
 body {
   height: 100%;
   margin: 0;
-  overflow: hidden !important;
   font-family: 'Arial Regular';
 }
 div#preload {
@@ -148,31 +147,36 @@ img.about-title {
   color: #4c3147;
   font-weight: 400;
 }
+.page-about .page-content {
+  padding-left: 33%;
+}
 /** Music Page
 ---------------------*/
 .page-music .page-content {
   margin: 0;
   padding-top: 5%;
-  padding-left: 0;
+  padding-left: 50%;
   padding-right: 0;
+}
+.music-image {
+  width: 167px;
+  height: 167px;
 }
 .music-cover {
   display: inline-table;
   text-align: center;
-  width: 25%;
-  padding-right: 5%;
-  padding-top: .5em;
-}
-.music-cover img {
-  width: 100%;
+  width: 167px;
+  height: 233px;
+  margin: 0;
+  margin-right: 5%;
 }
 .music-title {
   padding-top: .5em;
-  font-size: .75em;
+  font-size: 16px;
   font-weight: bold;
 }
 .music-other {
-  font-size: 0.5em;
+  font-size: 14px;
 }
 /** Press Page
 ---------------------*/
@@ -366,7 +370,31 @@ nav li {
     padding-top: 10px;
   }
 }
-@media screen and (max-width: 44.75em) {
+@media screen and (max-width: 1195px) {
+  .page-music .page-content {
+    padding-top: 5%;
+    padding-left: 45%;
+  }
+}
+@media screen and (max-width: 1095px) {
+  .page-music .page-content {
+    padding-top: 5%;
+    padding-left: 40%;
+  }
+}
+@media screen and (max-width: 995px) {
+  .page-music .page-content {
+    padding-top: 5%;
+    padding-left: 35%;
+  }
+}
+@media screen and (max-width: 895px) {
+  .page-music .page-content {
+    padding-top: 5%;
+    padding-left: 20%;
+  }
+}
+@media screen and (max-width: 716px) {
   .nav-inner-grid {
     display: block !important;
   }
@@ -402,30 +430,60 @@ nav li {
     color: #4c3147;
     font-weight: 400;
   }
+  .page-about .page-content {
+    padding-left: 3%;
+  }
   /* Small Music Page
   --------------------*/
   .page-music .page-content {
-    margin: 0;
     padding-top: 5%;
+    padding-left: 3%;
+    padding-right: 0;
+    width: 100%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   .music-cover {
     display: inline-table;
     text-align: center;
-    width: 40%;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-top: .5em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /*
+  .page-music {
+    .page-content {
+      margin: 0;
+      padding-top: 5%;
+      padding-left: 3%;
+      padding-right: 3%;
+    }
+  }
+
+  .music-cover {
+    display: inline-table;
+    text-align: center;
     padding-right: 5%;
     padding-top: .5em;
+
+    img {
+    }
   }
-  .music-cover img {
-    width: 100%;
-  }
+
   .music-title {
     padding-top: .5em;
     font-size: .75em;
     font-weight: bold;
+
   }
+
   .music-other {
     font-size: 0.5em;
   }
+  */
   /* Small Press Page
   --------------------*/
   .press-cover {
