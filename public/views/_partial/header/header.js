@@ -11,7 +11,7 @@ var app = angular.module('app')
     var widget = SC.Widget( widgetIframe );
 
     //var url = "https://soundcloud.com/katsolar/remix-right-here-indoor-storm";
-    var url = contentFactory.single.url;
+    var url = contentFactory.mplayer.soundcloudUrl;
 
     widget.load(url, {
       show_artwork: false,
@@ -30,27 +30,9 @@ var app = angular.module('app')
 
     var playbutton = $('#icon-mplayer-button-id');
 
-    /*
-    playbutton.on('click', function() {
-      console.log("---- CLICK ----");
-
-      widget.isPaused(function(paused) {
-        if (paused) {
-          widget.play();
-          _play.slideUp();
-          _pause.slideDown();
-        } else {
-          widget.pause();
-          _pause.slideUp();
-          _play.slideDown();
-        }
-      });
-    }); // playbutton
-*/
-
     window._SCW = widget;
 
-    console.log("---- ANGULAR DOCUMENT READY ----");
+    //console.log("---- ANGULAR DOCUMENT READY ----");
 
   }); // on document ready
 
@@ -59,7 +41,9 @@ var app = angular.module('app')
 
 
 .directive('mplayButton', [function() {
-  console.log("In Directive");
+  //console.log("In Directive");
+
+  var ready = true;
 
   var widgetIframe = $('#sc-widget')[0];
   var widget = SC.Widget( widgetIframe );
@@ -69,17 +53,27 @@ var app = angular.module('app')
 
   return function(scope, element, attr) {
     element.on('click', function() {
-      console.log("---- DIR CLICK ----");
+      if (!ready) {
+        return false;
+      }
 
       widget.isPaused(function(paused) {
         if (paused) {
+          ready = false;
           widget.play();
-          _play.slideUp();
-          _pause.slideDown();
+          _play.fadeOut(function() {
+            _pause.fadeIn(function() {
+              ready = true;
+            });
+          });
         } else {
+          ready = false;
           widget.pause();
-          _pause.slideUp();
-          _play.slideDown();
+          _pause.fadeOut(function() {
+            _play.fadeIn(function() {
+              ready = true;
+            });
+          });
         }
       });
     });

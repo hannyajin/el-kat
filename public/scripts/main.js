@@ -22,7 +22,26 @@ config(['$routeProvider', function($routeProvider) {
 ---------------------*/
 app.factory('contentFactory', [function() {
   // navigation bar links
-  var navLinks = ['Home', 'About', 'Music', 'Videos', 'Events', 'Press'];
+  var navLinks = [{
+    text: 'Main',
+    link: 'home'
+  }, {
+    text: 'About',
+    link: 'about'
+  }, {
+    text: 'Events',
+    link: 'events'
+  }, {
+    text: 'Music',
+    link: 'music'
+  }, {
+    text: 'Press',
+    link: 'press'
+  }, {
+    text: 'Video',
+    link: 'video'
+  }];
+
   var bgImages = [
     'main-bg.jpg', 'about-bg.jpg', 'music-bg.jpg', 'events-bg.jpg', 'review-bg.jpg'
   ];
@@ -30,10 +49,6 @@ app.factory('contentFactory', [function() {
   var copyright = {
     text: '© KAT SOLAR 2014'
   };
-
-  var single = {
-    url: "https://soundcloud.com/katsolar/remix-right-here-indoor-storm"
-  }
 
   // social links
   var socialLinks = {
@@ -45,6 +60,7 @@ app.factory('contentFactory', [function() {
 
   // music player data
   var mplayer = {
+    soundcloudUrl: "https://soundcloud.com/katsolar/remix-right-here-indoor-storm",
     intro: 'NEW SINGLE',
     title: 'INFINITY',
     acknowledgments_intro: 'WITH REMIXES BY',
@@ -53,6 +69,7 @@ app.factory('contentFactory', [function() {
     ]
   };
 
+  // music page content data
   var music = {
     covers: [{
       src: 'img/covers/infinity_jsr.jpg',
@@ -92,6 +109,7 @@ app.factory('contentFactory', [function() {
     }]
   };
 
+  // video page content data
   var video = {
     list: [{
       url: '//www.youtube.com/embed/JN98cyvFaXA',
@@ -102,6 +120,7 @@ app.factory('contentFactory', [function() {
     }]
   };
 
+  // press page content data
   var press = {
     items: [{
       title: "Watch the full length music video \"Snake Eyes\"",
@@ -138,7 +157,7 @@ app.factory('contentFactory', [function() {
     }]
   }
 
-  // about page data
+  // about page content data
   var about = {
     title: 'KATSOLAR',
     //texts: ['test1', 'test2']
@@ -164,9 +183,6 @@ app.factory('contentFactory', [function() {
     bgImages: bgImages,
     socialLinks: socialLinks,
     mplayer: mplayer,
-    music: music,
-    about: about,
-    single: single,
 
     pages: {
       music: music,

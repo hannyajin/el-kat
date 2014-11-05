@@ -50,8 +50,12 @@
 
 @press_title_color: #9c2ba9; // from press page
 @press_text_color: #1b0c18; // from press page
-@press_title_size: 20px;
+
+@press_title_size: 18px;
 @press_text_size: 18px;
+
+@press_title_size_sm: 18px;
+@press_text_size_sm: 18px;
 
 @header_padding_top: 48px;
 @corner_padding: 48px;
@@ -309,7 +313,7 @@ img.about-title {
 
     .press-title {
       padding-top: 8px;
-      font-size: 20px;
+      font-size: @press_title_size;
       font-weight: bold;
       font-family: 'Arial Bold' !important;
       color: @press_title_color;
@@ -317,7 +321,7 @@ img.about-title {
 
     .press-text {
       max-width: 600px;
-      font-size: 18px;
+      font-size: @press_text_size;
       font-family: 'Arial Regular' !important;
       color: @press_text_color;
     }
@@ -687,7 +691,7 @@ nav li {
     padding-left: 0%;
 
     .press-image {
-      width: 50px;
+      width: 100px;
       height: auto;
       margin: 0;
       padding: 0;
@@ -704,7 +708,7 @@ nav li {
 
       .press-title {
         padding-top: 8px;
-        font-size: 15px;
+        font-size: @press_title_size_sm;
         font-weight: bold;
         font-family: 'Arial Bold' !important;
         color: @press_title_color;
@@ -712,7 +716,7 @@ nav li {
 
       .press-text {
         max-width: 600px;
-        font-size: 13px;
+        font-size: @press_text_size_sm;
         font-family: 'Arial Regular' !important;
         color: @press_text_color;
       }

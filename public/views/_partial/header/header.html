@@ -16,10 +16,15 @@
     <div class="music-player-container">
       
       <div id="icon-mplayer-button-id" mplay-button>
-        <img src="img/icons/player_icon.png" class="icon-mplayer" id="icon-mplayer-id">
+        <!-- Play Button -->
+        <img src="img/icons/play_icon.png" class="icon-mplayer" id="icon-mplayer-id">
+        <!-- Pause Button -->
+        <img src="img/icons/pause_icon.png" style="display: none;" class="icon-mplayer" id="icon-mplayer-pause-id">
+        <!--
         <svg class="icon-mplayer" style="display: none;" id="icon-mplayer-pause-id">
           <use xlink:href="#icon-mplayer-pause"></use>
         </svg>
+        -->
       </div>
 
       <iframe id="sc-widget" width="0px" height="0px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2F"></iframe>
@@ -34,6 +39,11 @@
 
           <div class="main-nav-group"> <!-- navbar inner grid -->
             <div class="top-nav-group"> <!-- group youtube and facebook icons together -->
+
+              <li><a href="{{ socialLinks.itunes }}">
+                <img src="img/icons/itunes_icon.png" class="icons icons-it">
+              </a></li>
+
               <li><a href="{{ socialLinks.youtube }}">
                 <img src="img/icons/youtube_icon.png" class="icons icons-yt">
               </a></li>
@@ -54,7 +64,7 @@
                 <!-- dropdown menu -->
                 <ul class="dropdown-menu">
                   <span class="diamond-icon"></span>
-                  <li ng-repeat="link in navLinks"><a href="#/{{ link | lowercase }}">{{ link }}</a></li>
+                  <li ng-repeat="link in navLinks"><a href="#/{{ link.link | lowercase }}">{{ link.text }}</a></li>
                 </ul>
               </li> <!-- dropdown -->
             </div> <!-- twitter, instagram and the dropdown icon group -->
