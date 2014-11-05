@@ -252,19 +252,14 @@ header {
   top: 0;
   left: 0;
 }
-footer {
+.footer-container {
   position: fixed;
   bottom: 0px;
   right: 0px;
 }
-footer img {
+.footer-container img {
   float: right;
   padding-bottom: 5px;
-}
-.footer-home-fix {
-  padding-left: 100px;
-  padding-right: 100px;
-  float: right;
 }
 nav {
   z-index: 800;
