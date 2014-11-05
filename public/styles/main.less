@@ -60,6 +60,21 @@
 @nav_padding_top: 32px;
 @corner_padding: 48px;
 
+
+// font families
+@title_font_family: 'Oswald Regular';
+@text_font_family: 'DroidSans';
+
+@press_title_font_family: @title_font_family;
+@press_text_font_family: @text_font_family;
+
+@about_text_font_family: @text_font_family;
+
+@music_title_font_family: @title_font_family;
+@music_text_font_family: @text_font_family;
+@music_title_letter_spacing: 1px;
+
+
 //@mplayer_text_shadow_color: #3366ff;
 //@mplayer_text_shadow_color: #b3c2f1;
 //@mplayer_text_shadow_color: #2f7bf9;
@@ -246,7 +261,7 @@ img.about-title {
   padding-right: 14%;
   font-size: 1em;
   color: @about_text_color;
-  font-weight: 400;
+  font-family: @about_text_font_family !important;
 }
 
 .page-about {
@@ -284,14 +299,19 @@ img.about-title {
 }
 
 .music-title {
-  padding-top: .5em;
-  font-size: 16px;
-  font-weight: bold;
-
+  padding-top: 5px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  letter-spacing: @music_title_letter_spacing;
+  //font-family: 'Arial Bold';
+  font-family: @music_title_font_family;
 }
 
 .music-other {
-  font-size: 14px;
+  font-family: @music_text_font_family;
+  //font-family: 'Arial Regular';
+
+  font-size: 16px;
 }
 
 
@@ -334,14 +354,14 @@ img.about-title {
       padding-top: 8px;
       font-size: @press_title_size;
       letter-spacing: 1px;
-      font-family: 'Oswald Regular' !important;
+      font-family: @press_title_font_family !important;
       color: @press_title_color;
     }
 
     .press-text {
       max-width: 600px;
       font-size: @press_text_size;
-      font-family: 'DroidSans' !important;
+      font-family: @press_text_font_family !important;
       color: @press_text_color;
     }
   }
@@ -677,11 +697,11 @@ nav li {
 
   .about-text {
     //padding-left: 2%; glow fix
-    padding-top: 1em; // new paragraph
+    padding-top: 16px; // new paragraph
     padding-right: 3%;
-    font-size: 1em;
+    font-size: 16px;
     color: @about_text_color;
-    font-weight: 400;
+    font-family: @about_text_font_family !important;
   }
 
   .page-about {

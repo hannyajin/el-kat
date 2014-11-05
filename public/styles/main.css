@@ -149,7 +149,7 @@ img.about-title {
   padding-right: 14%;
   font-size: 1em;
   color: #4c3147;
-  font-weight: 400;
+  font-family: 'DroidSans' !important;
 }
 .page-about .page-content {
   padding-left: 33%;
@@ -175,12 +175,14 @@ img.about-title {
   margin-right: 5%;
 }
 .music-title {
-  padding-top: .5em;
-  font-size: 16px;
-  font-weight: bold;
+  padding-top: 5px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: 'Oswald Regular';
 }
 .music-other {
-  font-size: 14px;
+  font-family: 'DroidSans';
+  font-size: 16px;
 }
 /** Press Page
 ---------------------*/
@@ -497,11 +499,11 @@ nav li {
     padding-bottom: 0em;
   }
   .about-text {
-    padding-top: 1em;
+    padding-top: 16px;
     padding-right: 3%;
-    font-size: 1em;
+    font-size: 16px;
     color: #4c3147;
-    font-weight: 400;
+    font-family: 'DroidSans' !important;
   }
   .page-about .page-content {
     padding-left: 3%;
