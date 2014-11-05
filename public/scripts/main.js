@@ -58,6 +58,7 @@ app.factory('contentFactory', [function() {
 
   // social links
   var socialLinks = {
+    itunes: "https://www.apple.com/itunes/",
     youtube: 'https://youtube.com',
     facebook: 'https://facebook.com',
     twitter: 'https://twitter.com',
