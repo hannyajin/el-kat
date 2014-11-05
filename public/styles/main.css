@@ -139,6 +139,11 @@ a {
 .page-videos.cover-image {
   background: url('../img/videos-bg.jpg') no-repeat center top;
 }
+/** Home page
+---------------------*/
+.page-home .page-content {
+  width: 600px;
+}
 /** About page
 ---------------------*/
 img.about-title {
@@ -411,11 +416,6 @@ nav li {
 }
 /** Special css for small screens (mobile phones).
 ---------------------*/
-/** DISABLE Small screen responsive layout 
-   -> compensate with large viewport
-
-// switch to dynamic KATSOLAR title on main page
-// on small screens
 #home-logo {
   display: none;
   margin-left: auto;
@@ -442,7 +442,6 @@ nav li {
     margin-left: -3%;
   }
 }
-*/
 @media screen and (max-width: 716px) {
   footer {
     display: none;
@@ -460,6 +459,9 @@ nav li {
     padding-right: 0px;
   }
 }
+/** DISABLE Small screen responsive layout 
+   -> compensate with large viewport
+
 /*
 //44.750em
 @media screen and (max-width: 716px) {
