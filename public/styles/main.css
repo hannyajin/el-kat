@@ -38,24 +38,25 @@
 }
 /** Custom
 ---------------------*/
+body {
+  height: 0px;
+  width: 100%;
+}
 html,
 body {
-  height: 100%;
   margin: 0;
   font-family: 'Arial Regular';
 }
 div#preload {
   display: none;
 }
+a {
+  text-decoration: none;
+}
 /** Mplayer, music player
 ---------------------*/
 #sc-widget {
   display: none;
-}
-.mplayer-icon {
-  background: url("../img/mplayer_icon.png") no-repeat;
-  display: block;
-  width: 100%;
 }
 .music-player p {
   display: block;
@@ -92,31 +93,22 @@ div#preload {
   bottom: 10px;
   width: 100%;
 }
-#home-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 78%;
-  position: relative;
-}
 .cover-image {
-  z-index: -10;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -50;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   -o-background-size: cover !important;
   background-size: cover !important;
-  z-index: -1000 !important;
-  min-height: 100%;
   margin: 0;
   padding: 0;
 }
 .page-home.cover-image {
-  background: url('../img/main-bg.jpg') no-repeat center top;
+  background: url('../img/main-bg-titled.jpg') no-repeat center top;
 }
 .page-about.cover-image {
   background: url('../img/about-bg.jpg') no-repeat center top;
@@ -186,6 +178,9 @@ img.about-title {
   padding-right: 0;
   padding-top: 75px;
 }
+.page-press .page-content a {
+  text-decoration: none;
+}
 .press-cover {
   padding-left: 33%;
   display: inline-table;
@@ -204,10 +199,10 @@ img.about-title {
   text-align: left;
   padding-left: 28px;
 }
-.press-cover .press-text-container .press-title {
+.press-cover .press-text-container .press-title,
+.press-cover .press-text-container a {
   padding-top: 8px;
   font-size: 18px;
-  font-weight: bold;
   font-family: 'Arial Bold' !important;
   color: #9c2ba9;
 }
@@ -222,24 +217,62 @@ img.about-title {
 .page-videos .page-content {
   margin: 0;
   padding-left: 0;
-  padding-right: 0;
+  padding-right: 5%;
   padding-top: 45px;
+  padding-left: 50%;
 }
 .video-content {
   padding-top: 25px;
 }
+.video-frame {
+  width: 100%;
+}
 /** Navigation
 ---------------------*/
+.icons {
+  position: relative;
+  -webkit-transition: all 0.1s ease-out 0.1s;
+  -moz-transition: all 0.1s ease-out 0.1s;
+  -ms-transition: all 0.1s ease-out 0.1s;
+  -o-transition: all 0.1s ease-out 0.1s;
+}
+.icons:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+.icon-mplayer:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
 header {
   top: 0;
   left: 0;
 }
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+footer img {
+  float: right;
+  padding-bottom: 5px;
+}
+.footer-home-fix {
+  padding-left: 100px;
+  padding-right: 100px;
+  float: right;
+}
 nav {
-  z-index: 999;
+  z-index: 800;
   margin: 0;
   padding: 0;
   padding-right: 48px;
   padding-top: 48px;
+  padding-top: 32px;
 }
 .icon-facebook {
   margin-left: 8px;
@@ -263,6 +296,7 @@ nav li {
   margin: 0;
   padding: 0;
   float: right;
+  height: 48px;
 }
 .bot-nav-group,
 .top-nav-group {
@@ -360,7 +394,24 @@ nav li {
 }
 /** Special css for small screens (mobile phones).
 ---------------------*/
-@media screen and (max-width: 540px) {
+#home-logo {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 78%;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .page-home.cover-image {
+    background: url('../img/main-bg.jpg') no-repeat center top;
+  }
+  #home-logo {
+    display: block;
+    width: 106%;
+    margin-left: -3%;
+  }
+}
+@media screen and (max-width: 620px) {
   .top-nav-group {
     float: right;
     margin: 0;
@@ -370,30 +421,45 @@ nav li {
     padding-top: 10px;
   }
 }
+/*
 @media screen and (max-width: 1195px) {
-  .page-music .page-content {
-    padding-top: 5%;
-    padding-left: 45%;
+
+  .page-music {
+    .page-content {
+      padding-top: 5%;
+      padding-left: 45%;
+    }
   }
 }
+
 @media screen and (max-width: 1095px) {
-  .page-music .page-content {
-    padding-top: 5%;
-    padding-left: 40%;
+
+  .page-music {
+    .page-content {
+      padding-top: 5%;
+      padding-left: 40%;
+    }
   }
 }
 @media screen and (max-width: 995px) {
-  .page-music .page-content {
-    padding-top: 5%;
-    padding-left: 35%;
+
+  .page-music {
+    .page-content {
+      padding-top: 5%;
+      padding-left: 35%;
+    }
   }
 }
 @media screen and (max-width: 895px) {
-  .page-music .page-content {
-    padding-top: 5%;
-    padding-left: 20%;
+
+  .page-music {
+    .page-content {
+      padding-top: 5%;
+      padding-left: 20%;
+    }
   }
 }
+*/
 @media screen and (max-width: 716px) {
   .nav-inner-grid {
     display: block !important;
@@ -412,10 +478,6 @@ nav li {
   .logo-container {
     bottom: -10px;
   }
-  #home-logo {
-    width: 106%;
-    left: -3%;
-  }
   /* Small About Page
   --------------------*/
   img.about-title {
@@ -432,6 +494,17 @@ nav li {
   }
   .page-about .page-content {
     padding-left: 3%;
+  }
+  /* Small Video Page
+  --------------------*/
+  .page-videos .page-content {
+    padding-top: 5%;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 100%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   /* Small Music Page
   --------------------*/
@@ -506,14 +579,9 @@ nav li {
   .press-cover .press-text-container .press-title {
     padding-top: 8px;
     font-size: 18px;
-    font-weight: bold;
-    font-family: 'Arial Bold' !important;
-    color: #9c2ba9;
   }
   .press-cover .press-text-container .press-text {
     max-width: 600px;
     font-size: 18px;
-    font-family: 'Arial Regular' !important;
-    color: #1b0c18;
   }
 }

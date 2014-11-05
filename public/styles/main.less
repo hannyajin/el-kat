@@ -29,7 +29,6 @@
   -moz-background-size: @string !important;
   -o-background-size: @string !important;
   background-size: @string !important;
-  z-index: -1000 !important;
 }
 
 
@@ -58,6 +57,7 @@
 @press_text_size_sm: 18px;
 
 @header_padding_top: 48px;
+@nav_padding_top: 32px;
 @corner_padding: 48px;
 
 //@mplayer_text_shadow_color: #3366ff;
@@ -70,6 +70,8 @@
 @mplayer_text_color: #48494a;
 @mplayer_special_color: #ffffff; // white
 
+// Icons Hover
+@icon_scale_factor: 1.1;
 
 /** Fonts
 ---------------------*/
@@ -109,8 +111,11 @@
 
 /** Custom
 ---------------------*/
+body {
+  height: 0px;
+  width: 100%;
+}
 html, body {
-  height: 100%;
   margin: 0;
   //overflow: hidden !important;
   font-family: 'Arial Regular'
@@ -121,17 +126,16 @@ div#preload {
   display: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 /** Mplayer, music player
 ---------------------*/
 #sc-widget {
   display: none;
 }
 
-.mplayer-icon {
-  background: url("../img/mplayer_icon.png") no-repeat;
-  display: block;
-  width: 100%;
-}
 .music-player p {
   display: block;
 }
@@ -174,31 +178,24 @@ div#preload {
   width: 100%;
 }
 
-#home-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 78%;
-  position: relative;
-}
-
 .cover-image {
-  z-index: -10;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 
+  z-index: -50;
+
   //.background-size("cover !important");
   .background-size(cover);
-  min-height: 100%;
   margin: 0;
   padding: 0;
 }
 
 .page-home.cover-image {
-  background: url('../img/main-bg.jpg') no-repeat center top;
+  //background: url('../img/main-bg.jpg') no-repeat center top;
+  background: url('../img/main-bg-titled.jpg') no-repeat center top;
 }
 .page-about.cover-image {
   background: url('../img/about-bg.jpg') no-repeat center top;
@@ -214,6 +211,9 @@ div#preload {
 }
 .page-videos.cover-image {
   background: url('../img/videos-bg.jpg') no-repeat center top;
+}
+
+.cover-image {
 }
 
 
@@ -288,6 +288,10 @@ img.about-title {
     padding-left: 0;
     padding-right: 0;
     padding-top: 75px;
+
+    a {
+     text-decoration: none;
+    }
   }
 }
 
@@ -311,10 +315,9 @@ img.about-title {
     text-align: left;
     padding-left: 28px;
 
-    .press-title {
+    .press-title, a {
       padding-top: 8px;
       font-size: @press_title_size;
-      font-weight: bold;
       font-family: 'Arial Bold' !important;
       color: @press_title_color;
     }
@@ -334,22 +337,38 @@ img.about-title {
   .page-content {
     margin: 0;
     padding-left: 0;
-    padding-right: 0;
+    padding-right: 5%;
     padding-top: 45px;
+    padding-left: 50%;
   }
 }
 
 .video-content {
   padding-top: 25px;
+}
 
-  iframe {
-  }
+.video-frame {
+  width: 100%;
 }
 
 /** Navigation
 ---------------------*/
 
 .icons {
+  position: relative;
+
+  .transition(all 0.1s ease-out 0.1s);
+
+  &:hover {
+    .scale(@icon_scale_factor);
+    //.rotate(-360deg);
+  }
+}
+
+.icon-mplayer {
+  &:hover {
+    .scale(@icon_scale_factor);
+  }
 }
 
 header {
@@ -357,12 +376,30 @@ header {
   left: 0;
 }
 
+footer {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+
+  img {
+    float: right;
+    padding-bottom: 5px;
+  }
+}
+
+.footer-home-fix {
+  padding-left: 100px;
+  padding-right: 100px;
+  float: right;
+}
+
 nav {
-  z-index: 999;
+  z-index: 800;
   margin: 0;
   padding: 0;
   padding-right: @corner_padding;
   padding-top: @header_padding_top;
+  padding-top: @nav_padding_top;
 }
 
 .icon-facebook {
@@ -390,7 +427,8 @@ nav li {
 .nav-main {
   margin: 0;
   padding: 0;
-  float: right
+  float: right;
+  height: 48px;
 }
 
 .main-nav-group {
@@ -470,7 +508,7 @@ nav li {
   }
 }
 
-.menu-items {
+#menu-items {
 }
 
 .pure-menu-item {
@@ -478,9 +516,6 @@ nav li {
 
 /** PNG Icons
 ---------------------*/
-nav li {
-}
-
 
 /** SVG Icons
 ---------------------*/
@@ -517,7 +552,28 @@ nav li {
 
 /** Special css for small screens (mobile phones).
 ---------------------*/
-@media screen and (max-width: 540px) {
+
+// switch to dynamic KATSOLAR title on main page
+// on small screens
+#home-logo {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 78%;
+  position: relative;
+}
+@media screen and (max-width: 1000px) {
+  .page-home.cover-image {
+    background: url('../img/main-bg.jpg') no-repeat center top;
+  }
+  #home-logo {
+    display: block;
+    width: 106%;
+    margin-left: -3%;
+  }
+}
+
+@media screen and (max-width: 620px) {
 
   .top-nav-group {
     float: right;
@@ -529,6 +585,7 @@ nav li {
   }
 }
 
+/*
 @media screen and (max-width: 1195px) {
 
   .page-music {
@@ -566,6 +623,7 @@ nav li {
     }
   }
 }
+*/
 
 
 //44.750em
@@ -593,14 +651,6 @@ nav li {
     bottom: -10px;
   }
 
-  #home-logo {
-    //width: 120%;
-    //left: -10%;
-    width: 106%;
-    left: -3%;
-  }
-
-
   /* Small About Page
   --------------------*/
   img.about-title {
@@ -621,6 +671,21 @@ nav li {
   .page-about {
     .page-content {
       padding-left: 3%;
+    }
+  }
+
+  /* Small Video Page
+  --------------------*/
+  .page-videos {
+    .page-content {
+      padding-top: 5%;
+      padding-left: 0%;
+      padding-right: 0%;
+      width: 100%;
+      margin: 0;
+
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -709,16 +774,11 @@ nav li {
       .press-title {
         padding-top: 8px;
         font-size: @press_title_size_sm;
-        font-weight: bold;
-        font-family: 'Arial Bold' !important;
-        color: @press_title_color;
       }
 
       .press-text {
         max-width: 600px;
         font-size: @press_text_size_sm;
-        font-family: 'Arial Regular' !important;
-        color: @press_text_color;
       }
     }
   }

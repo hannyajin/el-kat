@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.videos', ['ngRoute'])
+var app = angular.module('app.videos', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
@@ -12,4 +12,14 @@ angular.module('app.videos', ['ngRoute'])
 
 .controller('videosCtrl', ['contentFactory', '$scope', function(cf, $scope) {
   $scope.video = cf.pages.video;
+  cf.copyright.hidden = false;
 }]);
+
+app.directive("scroll", function ($window) {
+  return function(scope, element, attrs) {
+    angular.element($window).bind("scroll", function() {
+      console.log("scrolling");
+      scope.$apply();
+    });
+  };
+});

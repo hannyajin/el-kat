@@ -12,4 +12,5 @@ angular.module('app.music', ['ngRoute'])
 
 .controller('musicCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
   $scope.music = contentFactory.pages.music;
+  contentFactory.copyright.hidden = false;
 }]);

@@ -7,6 +7,8 @@ var app = angular.module('app', [
   'appAnimations',
   'appFilters',
 
+  'youtube-embed',
+
   'app.home',
   'app.about',
   'app.music',
@@ -18,6 +20,8 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/home'});
 }]);
 
+
+
 /** Site content
 ---------------------*/
 app.factory('contentFactory', [function() {
@@ -26,20 +30,20 @@ app.factory('contentFactory', [function() {
     text: 'Main',
     link: 'home'
   }, {
-    text: 'About',
-    link: 'about'
-  }, {
     text: 'Events',
     link: 'events'
   }, {
     text: 'Music',
     link: 'music'
   }, {
+    text: 'Video',
+    link: 'videos'
+  }, {
     text: 'Press',
     link: 'press'
   }, {
-    text: 'Video',
-    link: 'video'
+    text: 'About',
+    link: 'about'
   }];
 
   var bgImages = [
@@ -47,7 +51,9 @@ app.factory('contentFactory', [function() {
   ];
 
   var copyright = {
-    text: '© KAT SOLAR 2014'
+    text: '© KAT SOLAR 2014',
+    imgSrc: 'img/solar_logo.png',
+    hidden: true
   };
 
   // social links
@@ -112,48 +118,81 @@ app.factory('contentFactory', [function() {
   // video page content data
   var video = {
     list: [{
-      url: '//www.youtube.com/embed/JN98cyvFaXA',
+      src: 'http://www.youtube.com/watch?v=JN98cyvFaXA',
       id: 'JN98cyvFaXA'
     },{
-      url: '//www.youtube.com/embed/TW_K4xFT40Y',
-      id: 'TW_K4xFT40Y'
+      src: 'http://www.youtube.com/watch?v=75NuObt-6A0',
+      id: '75NuObt-6A0'
+
+    },{
+      src: 'https://www.youtube.com/watch?v=hFHnEOfgzks',
+      id: 'hFHnEOfgzks'
+
+    },{
+      src: 'https://www.youtube.com/watch?v=EYGyhH1hBy0',
+      id: 'EYGyhH1hBy0'
     }]
   };
 
   // press page content data
   var press = {
     items: [{
+      href: "http://www.mtv.com/videos/kat-solar/913973/snake-eyes.jhtml",
       title: "Watch the full length music video \"Snake Eyes\"",
       text: "from Kat Solar which premiered on New, Now, Next",
-      src: "img/press/mtv_logo.png"
+      logoSrc: "img/press/mtv_logo.png"
     },{
+      href: "http://www.out.com/entertainment/music/2012/07/03/kat-solar-flares-snake-eyes-release-party",
       title: "Kat Solar Flares Up at ‘Snake Eyes’ Release Party",
       text: "A commensurate performer, Solar proved she could sing dance,\
        and play to a crowd. It seems very likely that her star will continue\
        to burn bright",
-      src: "img/press/out_magazine.jpg"
+      logoSrc: "img/press/out_magazine.jpg"
     },{
+      href: "http://scallywagandvagabond.com/2013/05/kat-solar-snake-eyes-soon-to-appear-on-logo-tv/",
       title: "Snake Eyes.‘ Soon to appear on Logo TV. A diva on the up’",
       text: "Kat Solar to be sure is one of those buoyant can do musicians\
        who has decided to take her brand of charisma\
        gutsy and theatrical to the fore",
-      src: "img/press/scallywag.jpg"
+      logoSrc: "img/press/scallywag.jpg"
     },{
+      href: "http://www.baeblemusic.com/musicblog/8-27-2012/A-Diva-Stuck-in-an-Indie-World-Kat-Solar-at-Le-Poisson-Rouge.html",
       title: "A Diva Stuck In An Indie World: Kat Solar at Le Poisson Rouge",
       text: "Kat Solar is an up and coming pop singer from the bright city of\
        Detroit who's a little bit of the last four decades",
-      src: "img/press/baeble.jpg"
+      logoSrc: "img/press/baeble.jpg"
     },{
+      href: "http://www.timeout.com/newyork/music/kat-solar-derek-nicoletto",
       title: "Kat Solar",
       text: "Detroit's Kat Solar, an electro-dance diva in the making shows off\
        brassy tunes and slick grooves from her debut album Snake Eyes",
-      src: "img/press/timeoutny.jpg"
+      logoSrc: "img/press/timeoutny.jpg"
     },{
+      href: "http://encoremag.com/new-york/articles/14719/kat-solar-comes-to-le-poisson-rouge",
       title: "Kat Solar Comes to Le Poisson Rouge",
       text: "Kat Solar's debut album has been met with enthusiasm Snake Eyes\
        takes thelistener on a narrative journey with a strong female protagonist\
        that is bold, sexyand full of adventure",
-      src: "img/press/encore.jpg"
+      logoSrc: "img/press/encore.jpg"
+    },{
+      href: "http://www.firstpost.com/topic/organization/out-magazine-kat-solar-epk-video-0qZFkCy_Ab8-38151-1.html",
+      title: "Kat Solar EPK",
+      text: "Kat Solar's debut album has been met with enthusiasm,\
+       including a rave review from Out Magazine.",
+      logoSrc: "img/press/firstpost_logo.gif"
+    },{
+      href: "http://soundtracktomyday.blogspot.com/2012/10/kat-solar-at-delaware-pride.html",
+      title: "BLOG REVIEW",
+      text: "She can dance, work a boa, and deliver a song with a coo and a wink,\
+       and maybe a little spank, too. Kat is having a great time on stage with her\
+       dancers, and that joy is contagious.",
+      logoSrc: "img/press/soundtracktomyday.gif"
+    },{
+      href: "http://www.joyofviolentmovement.com/post/37567429504/kat-solar-at-the-mercury-lounge-12-3-12",
+      title: "BLOG REVIEW",
+      text: "Solar has a powerfully seductive voice and is honestly quite a striking\
+       figure to look at.",
+      logoSrc: "img/press/joyviolent_movement.gif"
     }]
   }
 

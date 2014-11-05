@@ -12,4 +12,5 @@ angular.module('app.about', ['ngRoute'])
 
 .controller('aboutCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
   $scope.about = contentFactory.pages.about;
+  contentFactory.copyright.hidden = false;
 }]);

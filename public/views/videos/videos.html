@@ -1,38 +1,20 @@
-<div class="page-videos cover-image"></div>
-<div class="page page-videos">
+<div class="page page-videos" scroll id="videosPage">
 
-  <div class="pure-g">
-    <div class="pure-u-1-2">
+  <div class="page-content">
+
+    <div class="video-content" ng-repeat="video in video.list">
+
+      <youtube-video class="video-frame" video-id="video.id"></youtube-video>
+
+      <!--
+      <video class="video-frame" width="560" height="315" frameborder="0" autoplay>
+        <source type="video/youtube" SRC="http://www.youtube.com/watch?v=nOEw9iiopwI" />
+      </video> 
+      -->
     </div>
 
-    <div class="pure-u-1-2">
-      <div class="page-content">
-
-        <div class="video-content" ng-repeat="video in video.list">
-
-            <!--
-          <div id="video_container">
-            <video id="video_id" src="" width="780px" height="440px" class="video-js vjs-default-skin" controls preload="auto" data-setup='{ "techOrder": ["youtube"], "src": "http://www.youtube.com/embed/1CH76F1mFis" }'></video>
-          </div>
-            -->
-            <div ng-init="alert('Hello');">
-              <iframe ng-src="{{ ('//www.youtube.com/embed/' + video.id) | trustAsResourceUrl}}" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-            </div>
-          <!--
-          <youtube-video video-url="video.url"></youtube-video>
-          -->
-          
-
-
-          <!--
-          <div>
-            <iframe width="560" height="315" src="//www.youtube.com/embed/JN98cyvFaXA" frameborder="0" allowfullscreen></iframe>
-          </div>
-          -->
-        </div>
-
-      </div>
-    </div>
-  </div> <!-- pure-g -->
+  </div>
 
 </div>
+
+<div class="page-videos cover-image"></div>

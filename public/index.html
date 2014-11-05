@@ -27,8 +27,12 @@
   <header ng-include="'views/_partial/header/header.html'"></header>
 
   <div class="view-container">
-    <div ng-view class="view-frame"></div>
+    <div ng-cloak ng-view class="view-frame"></div>
   </div>
+
+  <footer ng-cloak ng-include="'views/_partial/footer/footer.html'"></footer>
+
+
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -42,7 +46,9 @@
   <script src="scripts/vendor/angular.js"></script>
   <script src="scripts/vendor/angular-route.js"></script>
   <script src="scripts/vendor/angular-animate.js"></script>
+  <!-- <script src="scripts/vendor/jquery-1.10.2.min.js"></script> -->
   <script src="scripts/vendor/jquery-1.10.2.min.js"></script>
+  <script src="scripts/vendor/angular-youtube-embed.js"></script>
   <script src="scripts/main.js"></script>
   <script src="scripts/animations.js"></script>
   <script src="scripts/filters.js"></script>
@@ -59,7 +65,7 @@
   
   <!-- partial views -->
   <script src="views/_partial/header/header.js"></script>
-  <script src="views/_partial/solar_logo/solar_logo.js"></script>
+  <script src="views/_partial/footer/footer.js"></script>
 
 
   <div id="preload">
