@@ -100,13 +100,28 @@
   src: url('../fonts/Gotham-XLight.ttf');
 }
 
+
 @font-face {
   font-family: 'Arial Regular';
-  src: url('../fonts/ARIAL.TTF');
+  src: url('../fonts/arial-webfont.tff');
 }
 @font-face {
   font-family: 'Arial Bold';
-  src: url('../fonts/ARIALBD.TTF');
+  src: url('../fonts/arialbd-webfont.ttf');
+}
+
+
+@font-face {
+  font-family: 'Oswald Regular';
+  src: url('../fonts/Oswald-Regular.otf');
+}
+@font-face {
+  font-family: 'Oswald Bold';
+  src: url('../fonts/Oswald-Bold.otf');
+}
+@font-face {
+  font-family: 'DroidSans';
+  src: url('../fonts/DroidSans.ttf');
 }
 
 /** Custom
@@ -318,14 +333,15 @@ img.about-title {
     .press-title, a {
       padding-top: 8px;
       font-size: @press_title_size;
-      font-family: 'Arial Bold' !important;
+      letter-spacing: 1px;
+      font-family: 'Oswald Regular' !important;
       color: @press_title_color;
     }
 
     .press-text {
       max-width: 600px;
       font-size: @press_text_size;
-      font-family: 'Arial Regular' !important;
+      font-family: 'DroidSans' !important;
       color: @press_text_color;
     }
   }
