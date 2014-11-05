@@ -283,6 +283,9 @@ body {
   padding-top: 48px;
   padding-left: 48px;
 }
+#icon-mplayer-button-id:hover {
+  cursor: pointer;
+}
 nav li {
   display: inline-block;
   padding-left: 10px;
