@@ -1,4 +1,4 @@
-<div ng-controller="headerCtrl" class="container pure-g">
+<div ng-controller="headerCtrl" class="container"> <!-- pure-g -->
 
   <!-- svg social icons (not youtube) -->
   <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -12,7 +12,6 @@
   </svg>
 
   <!-- music player -->
-  <div class="pure-u-1-12">
     <div class="music-player-container">
       
       <div id="icon-mplayer-button-id" mplay-button>
@@ -29,10 +28,13 @@
 
       <iframe id="sc-widget" width="0px" height="0px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2F"></iframe>
     </div>
-  </div>
+    <div class="music-player-information-container">
+      <div>
+        {{ mplayer.nowPlaying }}
+      </div>
+    </div>
 
   <!-- navigation -->
-  <div class="pure-u-11-12">
     <nav role="navigation">
       <div class="nav-main">
         <ul class="" id="menu-items">
@@ -76,5 +78,4 @@
         </ul> <!-- menu items -->
       </div>
     </nav>
-  </div>
 </div>

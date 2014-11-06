@@ -73,7 +73,8 @@ app.factory('contentFactory', [function() {
     acknowledgments_intro: 'WITH REMIXES BY',
     acknowledgments: [
       'JUMP SMOKERS &', 'RALPH ROSARIO'
-    ]
+    ],
+    nowPlaying: ''
   };
 
   // music page content data

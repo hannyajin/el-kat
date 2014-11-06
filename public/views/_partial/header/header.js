@@ -4,7 +4,9 @@ var app = angular.module('app')
 .controller('headerCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
   $scope.navLinks = contentFactory.navLinks;
   $scope.socialLinks = contentFactory.socialLinks;
+  $scope.mplayer = contentFactory.mplayer;
 
+  var cf = contentFactory;
 
   $(function() {
     var widgetIframe = $('#sc-widget')[0];
@@ -31,6 +33,15 @@ var app = angular.module('app')
     var playbutton = $('#icon-mplayer-button-id');
 
     window._SCW = widget;
+
+    widget.bind(SC.Widget.Events.PLAY, function() {
+      console.log("PLAY STARTED");
+      widget.getCurrentSound(function (sound) {
+        console.log("playing: " + sound.title);
+        cf.mplayer.nowPlaying = sound.title;
+        $scope.$apply();
+      })
+    })
 
     //console.log("---- ANGULAR DOCUMENT READY ----");
 

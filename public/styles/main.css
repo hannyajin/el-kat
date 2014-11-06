@@ -59,6 +59,7 @@ html,
 body {
   margin: 0;
   min-height: 415px;
+  min-width: 630px;
   font-family: 'Arial Regular';
 }
 div#preload {
@@ -142,22 +143,23 @@ a {
 /** Home page
 ---------------------*/
 .page-home .page-content {
+  padding-top: 40px;
   width: 600px;
 }
 /** About page
 ---------------------*/
 img.about-title {
-  width: 400px;
+  width: 465px;
   padding-top: 3em;
-  padding-bottom: 1em;
+  padding-bottom: 40px;
 }
 .about-text {
-  padding-top: 1em;
-  padding-right: 14%;
-  font-size: 1em;
+  padding-bottom: 1em;
+  line-height: 180%;
+  font-size: 18px;
   color: #4c3147;
-  font-family: 'DroidSans' !important;
-  width: 600px;
+  font-family: 'Oswald Regular' !important;
+  width: 800px;
 }
 .page-about .page-content {
   padding-left: 33%;
@@ -187,10 +189,11 @@ img.about-title {
   padding-top: 5px;
   font-size: 18px;
   letter-spacing: 1px;
-  font-family: 'Oswald Regular';
+  letter-spacing: 0px;
+  font-family: 'Oswald Bold';
 }
 .music-other {
-  font-family: 'DroidSans';
+  font-family: 'Oswald Regular';
   font-size: 16px;
 }
 /** Press Page
@@ -207,7 +210,7 @@ img.about-title {
 .press-cover {
   padding-left: 33%;
   display: inline-table;
-  padding-top: 25px;
+  padding-top: 15px;
 }
 .press-cover .press-image {
   width: 200px;
@@ -220,20 +223,19 @@ img.about-title {
 }
 .press-cover .press-text-container {
   text-align: left;
-  padding-left: 28px;
+  padding-left: 20px;
 }
 .press-cover .press-text-container .press-title,
 .press-cover .press-text-container a {
-  padding-top: 8px;
   font-size: 18px;
-  letter-spacing: 1px;
-  font-family: 'Oswald Regular' !important;
+  font-family: 'Oswald Bold' !important;
   color: #9c2ba9;
+  font-weight: bold;
 }
 .press-cover .press-text-container .press-text {
-  width: 600px;
+  width: 550px;
   font-size: 18px;
-  font-family: 'DroidSans' !important;
+  font-family: 'Oswald Regular' !important;
   color: #1b0c18;
 }
 /** Video Page
@@ -278,20 +280,13 @@ header {
 }
 .footer-container {
   position: fixed;
-  bottom: 0px;
-  right: 0px;
+  bottom: 30px;
+  right: 20px;
+  color: white;
 }
 .footer-container img {
   float: right;
   padding-bottom: 5px;
-}
-nav {
-  z-index: 800;
-  margin: 0;
-  padding: 0;
-  padding-right: 48px;
-  padding-top: 48px;
-  padding-top: 32px;
 }
 .icon-facebook {
   margin-left: 8px;
@@ -300,12 +295,20 @@ body {
   min-width: 400px;
 }
 .music-player-container {
+  display: inline-block;
   z-index: 999;
   float: left;
   margin: 0;
   padding: 0;
   padding-top: 48px;
   padding-left: 48px;
+}
+.music-player-information-container {
+  font-family: 'Gotham-Light';
+  margin: 0;
+  padding: 0;
+  padding-top: 58px;
+  padding-left: 101px;
 }
 #icon-mplayer-button-id:hover {
   cursor: pointer;
@@ -314,11 +317,17 @@ nav li {
   display: inline-block;
   padding-left: 10px;
 }
-.nav-main {
+nav {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  float: right;
+  z-index: 800;
   margin: 0;
   padding: 0;
-  float: right;
-  height: 48px;
+  padding-right: 48px;
+  padding-top: 32px;
 }
 .bot-nav-group,
 .top-nav-group {
@@ -330,7 +339,7 @@ nav li {
 }
 .dropdown .diamond-icon {
   background: url("../img/diamond.png") no-repeat;
-  background-position: 88px 0px;
+  background-position: 92px 0px;
   display: block;
   width: 100%;
   position: absolute;
@@ -351,6 +360,7 @@ nav li {
   right: 0;
   padding-top: 12px;
   margin: 0;
+  font-family: 'DroidSans';
 }
 .dropdown .dropdown-menu:hover {
   display: block;
@@ -440,6 +450,18 @@ nav li {
     display: block;
     width: 106%;
     margin-left: -3%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  footer {
+    display: none;
+  }
+  .footer-container {
+    left: 10px;
+    bottom: 20px;
+  }
+  .footer-container img {
+    float: left;
   }
 }
 @media screen and (max-width: 716px) {
