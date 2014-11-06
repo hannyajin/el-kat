@@ -13,4 +13,5 @@ angular.module('app.press', ['ngRoute'])
 .controller('pressCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
   $scope.press = contentFactory.pages.press;
   contentFactory.copyright.hidden = false;
+  contentFactory.copyright.invert = false;
 }]);

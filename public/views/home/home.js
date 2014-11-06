@@ -13,4 +13,5 @@ angular.module('app.home', ['ngRoute'])
 .controller('homeCtrl', ['contentFactory', '$scope', function(contentFactory, $scope) {
   contentFactory.copyright.hidden = true;
   $scope.mplayer = contentFactory.mplayer;
+  contentFactory.copyright.invert = false;
 }]);

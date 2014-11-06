@@ -158,7 +158,7 @@ img.about-title {
   line-height: 180%;
   font-size: 18px;
   color: #4c3147;
-  font-family: 'Oswald Regular' !important;
+  font-family: 'DroidSans' !important;
   width: 800px;
 }
 .page-about .page-content {
@@ -190,10 +190,10 @@ img.about-title {
   font-size: 18px;
   letter-spacing: 1px;
   letter-spacing: 0px;
-  font-family: 'Oswald Bold';
+  font-family: 'Oswald Regular';
 }
 .music-other {
-  font-family: 'Oswald Regular';
+  font-family: 'DroidSans';
   font-size: 16px;
 }
 /** Press Page
@@ -228,14 +228,14 @@ img.about-title {
 .press-cover .press-text-container .press-title,
 .press-cover .press-text-container a {
   font-size: 18px;
-  font-family: 'Oswald Bold' !important;
+  font-family: 'Oswald Regular' !important;
   color: #9c2ba9;
   font-weight: bold;
 }
 .press-cover .press-text-container .press-text {
   width: 550px;
   font-size: 18px;
-  font-family: 'Oswald Regular' !important;
+  font-family: 'DroidSans' !important;
   color: #1b0c18;
 }
 /** Video Page
@@ -287,6 +287,9 @@ header {
 .footer-container img {
   float: right;
   padding-bottom: 5px;
+}
+.footer-container .black-color {
+  color: black;
 }
 .icon-facebook {
   margin-left: 8px;

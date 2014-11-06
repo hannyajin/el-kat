@@ -6,6 +6,8 @@ var app = angular.module('app')
   $scope.socialLinks = contentFactory.socialLinks;
   $scope.mplayer = contentFactory.mplayer;
 
+  $scope.copyright = contentFactory.copyright;
+
   var cf = contentFactory;
 
   $(function() {

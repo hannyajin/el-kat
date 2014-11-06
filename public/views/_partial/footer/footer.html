@@ -2,7 +2,8 @@
   <div ng-hide="copyright.hidden">
     <div class="copyright-container">
       <img ng-src="{{ copyright.imgSrc }}">
-      <div class="copyright-text">{{ copyright.text }}</div>
+      <div ng-hide="copyright.invert" class="copyright-text">{{ copyright.text }}</div>
+      <div ng-hide="!copyright.invert" class="copyright-text black-color">{{ copyright.text }}</div>
     </div>
   </div>
 </div>

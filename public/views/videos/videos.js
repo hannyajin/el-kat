@@ -13,6 +13,7 @@ var app = angular.module('app.videos', ['ngRoute'])
 .controller('videosCtrl', ['contentFactory', '$scope', function(cf, $scope) {
   $scope.video = cf.pages.video;
   cf.copyright.hidden = false;
+  cf.copyright.invert = false;
 }]);
 
 app.directive("scroll", function ($window) {

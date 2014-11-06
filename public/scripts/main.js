@@ -53,7 +53,8 @@ app.factory('contentFactory', [function() {
   var copyright = {
     text: '© KAT SOLAR 2014',
     imgSrc: 'img/solar_logo.png',
-    hidden: true
+    hidden: true,
+    invert: false
   };
 
   // social links
@@ -113,7 +114,7 @@ app.factory('contentFactory', [function() {
       src: 'img/covers/summertime_love_fd.jpg',
       url: '#',
       title: 'Summertime Love',
-      other: 'Featuring Dawn'
+      other: 'Featuring Daven'
     }]
   };
 

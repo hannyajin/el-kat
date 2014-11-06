@@ -16,9 +16,9 @@
       
       <div id="icon-mplayer-button-id" mplay-button>
         <!-- Play Button -->
-        <img src="img/icons/darker/play_icon.png" class="icon-mplayer" id="icon-mplayer-id">
+        <img ng-src="img/icons{{ copyright.hidden ? '' : '/darker' }}/play_icon.png" class="icon-mplayer" id="icon-mplayer-id">
         <!-- Pause Button -->
-        <img src="img/icons/darker/pause_icon.png" style="display: none;" class="icon-mplayer" id="icon-mplayer-pause-id">
+        <img ng-src="img/icons{{ copyright.hidden ? '' : '/darker' }}/pause_icon.png" style="display: none;" class="icon-mplayer" id="icon-mplayer-pause-id">
         <!--
         <svg class="icon-mplayer" style="display: none;" id="icon-mplayer-pause-id">
           <use xlink:href="#icon-mplayer-pause"></use>
@@ -33,7 +33,7 @@
         KATSOLAR
       </div>
       <div class="song">
-        Now Playing: {{ mplayer.nowPlaying }}
+        Infinity: {{ mplayer.nowPlaying }}
       </div>
     </div>
 
@@ -46,27 +46,33 @@
             <div class="top-nav-group"> <!-- group youtube and facebook icons together -->
 
               <li><a href="{{ socialLinks.itunes }}">
-                <img src="img/icons/darker/itunes_icon.png" class="icons icons-it">
+                <img ng-src="img/icons{{ copyright.hidden ? '' : '/darker' }}/itunes_icon.png" class="icons icons-it">
               </a></li>
 
               <li><a href="{{ socialLinks.youtube }}">
-                <img src="img/icons/darker/youtube_icon.png" class="icons icons-yt">
+                <img ng-src="img/icons{{ copyright.hidden ? '' : '/darker' }}/youtube_icon.png" class="icons icons-yt">
               </a></li>
 
-              <li><a href="{{ socialLinks.facebook }}"><img src="img/icons/darker/facebook_icon.png" class="icons icons-fb"></a></li>
+              <li><a href="{{ socialLinks.facebook }}">
+                <img ng-src="img/icons{{ copyright.hidden ? '' : '/darker' }}/facebook_icon.png" class="icons icons-fb">
+              </a></li>
 
 <!-- disable two group stacking
             </div> <!-- youtube / facebook group -->
 <!--            <div class="bot-nav-group"> <!-- group twitter, instagram and the dropdown icons together -->
 
-              <li><a href="{{ socialLinks.twitter }}"><img src="img/icons/darker/twitter_icon.png" class="icons icons-tw"></a></li>
+              <li><a href="{{ socialLinks.twitter }}">
+                <img ng-src="img/icons{{ copyright.hidden ? '' : '/darker' }}/twitter_icon.png" class="icons icons-tw">
+              </a></li>
 
-              <li><a href="{{ socialLinks.instagram }}"><img src="img/icons/darker/instagram_icon.png" class="icons icons-ig"></a></li>
+              <li><a href="{{ socialLinks.instagram }}">
+                <img ng-src="img/icons{{ copyright.hidden ? '' : '/darker' }}/instagram_icon.png" class="icons icons-ig">
+              </a></li>
 
               <!-- dropdown -->
               <li class="dropdown">
                 <a href="#">
-                  <img src="img/icons/darker/dropdown_icon.png" class="icons icons-dropdown">
+                  <img ng-src="img/icons{{ copyright.hidden ? '' : '/darker' }}/dropdown_icon.png" class="icons icons-dropdown">
                 </a>
                 <!-- dropdown menu -->
                 <ul class="dropdown-menu">

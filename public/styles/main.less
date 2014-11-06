@@ -68,18 +68,18 @@
 @press_title_font_family: @title_font_family;
 @press_text_font_family: @text_font_family;
 
-@press_title_font_family: 'Oswald Bold';
-@press_text_font_family: 'Oswald Regular';
+@press_title_font_family: @title_font_family;
+@press_text_font_family: @text_font_family;
 
-@about_text_font_family: 'Oswald Regular';
+@about_text_font_family: @text_font_family;
 @about_text_size: 18px;
 
 @music_title_font_family: @title_font_family;
 @music_text_font_family: @text_font_family;
 @music_title_letter_spacing: 1px;
 
-@music_title_font_family: 'Oswald Bold';
-@music_text_font_family: 'Oswald Regular';
+@music_title_font_family: @title_font_family;
+@music_text_font_family: @text_font_family;
 @music_title_letter_spacing: 0px;
 
 
@@ -447,7 +447,12 @@ header {
     float: right;
     padding-bottom: 5px;
   }
+
+  .black-color {
+    color: black;
+  }
 }
+
 
 .icon-facebook {
   margin-left: 8px;

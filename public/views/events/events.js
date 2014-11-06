@@ -12,4 +12,5 @@ angular.module('app.events', ['ngRoute'])
 
 .controller('eventsCtrl', ['contentFactory', function(contentFactory) {
   contentFactory.copyright.hidden = false;
+  contentFactory.copyright.invert = false;
 }]);
