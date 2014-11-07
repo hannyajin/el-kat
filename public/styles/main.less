@@ -477,16 +477,18 @@ body {
   .title {
     font-family: 'Gotham-Medium';
     font-size: 18px;
+    padding-top: @header_padding_top - 11;
+    padding-left: @corner_padding * 2 + 5;
   }
 
-  font-size: 14px;
-
-  font-family: 'Gotham-Light';
-  margin: 0;
-  padding: 0;
-  //padding-top: @header_padding_top + 10;
-  padding-top: @header_padding_top;
-  padding-left: @corner_padding * 2 + 5;
+  .song {
+    font-family: 'Gotham-Light';
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    padding-top: 0px;
+    padding-left: @corner_padding * 2 + 5 + 8;
+  }
 }
 
 #icon-mplayer-button-id {

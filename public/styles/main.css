@@ -306,17 +306,19 @@ body {
   padding-top: 48px;
   padding-left: 48px;
 }
-.music-player-information-container {
-  font-size: 14px;
-  font-family: 'Gotham-Light';
-  margin: 0;
-  padding: 0;
-  padding-top: 48px;
-  padding-left: 101px;
-}
 .music-player-information-container .title {
   font-family: 'Gotham-Medium';
   font-size: 18px;
+  padding-top: 37px;
+  padding-left: 101px;
+}
+.music-player-information-container .song {
+  font-family: 'Gotham-Light';
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  padding-top: 0px;
+  padding-left: 109px;
 }
 #icon-mplayer-button-id:hover {
   cursor: pointer;
