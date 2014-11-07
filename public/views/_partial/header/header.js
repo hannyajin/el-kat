@@ -36,6 +36,7 @@ var app = angular.module('app')
 
     window._SCW = widget;
 
+    //widget.bind(SC.Widget.Events.PLAY, function() {
     widget.bind(SC.Widget.Events.PLAY, function() {
       console.log("PLAY STARTED");
       widget.getCurrentSound(function (sound) {

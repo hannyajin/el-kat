@@ -68,7 +68,7 @@ app.factory('contentFactory', [function() {
 
   // music player data
   var mplayer = {
-    soundcloudUrl: "https://soundcloud.com/katsolar/remix-right-here-indoor-storm",
+    soundcloudUrl: "https://soundcloud.com/katsolar/snake-eyes-indoor-storm-mix",
     intro: 'NEW SINGLE',
     title: 'INFINITY',
     acknowledgments_intro: 'WITH REMIXES BY',
