@@ -143,7 +143,7 @@ a {
 /** Home page
 ---------------------*/
 .page-home .page-content {
-  padding-top: 10px;
+  padding-top: 95px;
   width: 600px;
 }
 /** About page
@@ -249,6 +249,7 @@ img.about-title {
 }
 .video-content {
   padding-top: 25px;
+  width: 576px;
 }
 .video-frame {
   width: 100%;
@@ -434,6 +435,11 @@ nav {
   width: 40px;
   height: 40px;
 }
+/** Footer
+-----------------*/
+.copyright-container {
+  font-family: 'DroidSans';
+}
 /** Special css for small screens (mobile phones).
 ---------------------*/
 #home-logo {
@@ -443,6 +449,7 @@ nav {
   width: 78%;
   position: relative;
 }
+/*
 @media screen and (max-height: 415px) {
   #home-logo {
     position: fixed;
@@ -452,6 +459,8 @@ nav {
     top: 305px;
   }
 }
+*/
+/*
 @media screen and (max-width: 1000px) {
   .page-home.cover-image {
     background: url('../img/main-bg.jpg') no-repeat center top;
@@ -462,6 +471,7 @@ nav {
     margin-left: -3%;
   }
 }
+*/
 @media screen and (max-width: 1400px) {
   footer {
     display: none;

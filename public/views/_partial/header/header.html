@@ -1,16 +1,5 @@
 <div ng-controller="headerCtrl" class="container"> <!-- pure-g -->
 
-  <!-- svg social icons (not youtube) -->
-  <svg display="none" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-      <symbol id="icon-mplayer-pause" viewBox="0 0 16 16">
-        <title>music player</title>
-        <path d="m8,0c-4.418,0-8,3.582-8,8s3.582,8 8,8 8-3.582 8-8-3.582-8-8-8zm-1,12h-2v-4-4h2v8zm4,0h-2v-4-4h2v8z" />
-      </symbol>
-
-    </defs>
-  </svg>
-
   <!-- music player -->
     <div class="music-player-container">
       
@@ -19,18 +8,13 @@
         <img ng-src="img/icons{{ copyright.hidden ? '' : '/darker' }}/play_icon.png" class="icon-mplayer" id="icon-mplayer-id">
         <!-- Pause Button -->
         <img ng-src="img/icons{{ copyright.hidden ? '' : '/darker' }}/pause_icon.png" style="display: none;" class="icon-mplayer" id="icon-mplayer-pause-id">
-        <!--
-        <svg class="icon-mplayer" style="display: none;" id="icon-mplayer-pause-id">
-          <use xlink:href="#icon-mplayer-pause"></use>
-        </svg>
-        -->
       </div>
 
       <iframe id="sc-widget" width="0px" height="0px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2F"></iframe>
     </div>
-    <div class="music-player-information-container">
+    <div ng-hide="copyright.hidden" class="music-player-information-container">
       <div class="title">
-        <img src="img/homelogo25_sm.png">
+        <img src="img/homelogo25_esm.png">
       </div>
       <div class="song">
         INFINITY {{ mplayer.nowPlaying }}
