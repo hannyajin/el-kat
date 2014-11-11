@@ -1,11 +1,11 @@
 <div class="page-music cover-image"></div>
 <div class="page page-music">
 
-
       <div class="page-content">
 
         <div class="music-content">
           <div class="music-cover" ng-repeat="cover in music.covers">
+            <img class="music-image-shadow" ng-src="img/covers/shadow.png">
             <img class="music-image" ng-src="{{ cover.src }}">
             <div class="music-title">{{ cover.title }}</div>
             <div class="music-other">{{ cover.other }}</div>
@@ -13,7 +13,5 @@
         </div>
 
       </div>
-
-
 
 </div>

@@ -21,7 +21,6 @@ config(['$routeProvider', function($routeProvider) {
 }]);
 
 
-
 /** Site content
 ---------------------*/
 app.factory('contentFactory', [function() {
@@ -59,11 +58,11 @@ app.factory('contentFactory', [function() {
 
   // social links
   var socialLinks = {
-    itunes: "https://www.apple.com/itunes/",
-    youtube: 'https://youtube.com',
-    facebook: 'https://facebook.com',
-    twitter: 'https://twitter.com',
-    instagram: 'https://instagram.com'
+    itunes: "https://itunes.apple.com/us/artist/kat-solar/id510501970?ign-mpt=uo%3D4",
+    youtube: 'https://www.youtube.com/user/KatSolarMusic',
+    facebook: 'https://www.facebook.com/KatSolar',
+    twitter: 'https://twitter.com/KatSolar',
+    instagram: 'http://instagram.com/katsolar'
   };
 
   // music player data
@@ -106,7 +105,7 @@ app.factory('contentFactory', [function() {
       title: 'Snake Eyes',
       other: 'Indoor Storm Remix'
     }, {
-      src: 'img/covers/right_here_isr.jpg',
+      src: 'img/covers/RightHere_IndoorsMix2.jpeg',
       url: '#',
       title: 'Right Here',
       other: '(Indoor Storm Remix)'

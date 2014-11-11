@@ -264,7 +264,7 @@ a {
 
 .page-home {
   .page-content {
-    padding-top: 95px;
+    padding-top: 20px;
     width: 600px; // non responsive
   }
 }
@@ -288,7 +288,7 @@ img.about-title {
 
 .page-about {
   .page-content {
-    padding-left: 33%;
+    padding-left: 36%;
   }
 }
 
@@ -296,10 +296,10 @@ img.about-title {
 ---------------------*/
 .page-music {
   .page-content {
-    width: 600px; // non responsive
+    width: 700PX; // non responsive
     margin: 0;
     padding-top: 5%;
-    padding-left: 50%;
+    padding-left: 52%;
     padding-right: 0;
   }
 }
@@ -309,13 +309,19 @@ img.about-title {
   height: 167px;
 }
 
+.music-image-shadow {
+  position: absolute;
+  margin-left: -4px;
+  margin-top: -1px;
+}
+
 .music-cover {
   display: inline-table;
   text-align: center;
   width: 167px;
   height: 233px;
   margin: 0;
-  margin-right: 5%;
+  padding-right: 56px;
 
   img {
   }
@@ -346,6 +352,7 @@ img.about-title {
     padding-left: 0;
     padding-right: 0;
     padding-top: 75px;
+    padding-left: 33%;
 
     a {
      text-decoration: none;
@@ -354,7 +361,6 @@ img.about-title {
 }
 
 .press-cover {
-  padding-left: 33%;
   display: inline-table;
   padding-top: 15px;
 
@@ -402,6 +408,14 @@ img.about-title {
     padding-top: 45px;
     padding-left: 50%;
   }
+}
+
+.video-image-shadow {
+  position: absolute;
+  width: 628px;
+  height: 421px;
+  margin-left: -4px;
+  margin-top: -1px;
 }
 
 .video-content {
@@ -508,7 +522,7 @@ nav li {
 }
 
 nav {
-  position: fixed;
+  position: relative;
   top: 0px;
   right: 0px;
   display: inline-block;
@@ -519,6 +533,10 @@ nav {
   padding-right: @corner_padding;
   //padding-top: @header_padding_top;
   padding-top: @nav_padding_top;
+}
+
+header {
+  padding-bottom: 70px;
 }
 
 .main-nav-group {

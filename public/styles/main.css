@@ -143,7 +143,7 @@ a {
 /** Home page
 ---------------------*/
 .page-home .page-content {
-  padding-top: 95px;
+  padding-top: 20px;
   width: 600px;
 }
 /** About page
@@ -162,20 +162,25 @@ img.about-title {
   width: 800px;
 }
 .page-about .page-content {
-  padding-left: 33%;
+  padding-left: 36%;
 }
 /** Music Page
 ---------------------*/
 .page-music .page-content {
-  width: 600px;
+  width: 700PX;
   margin: 0;
   padding-top: 5%;
-  padding-left: 50%;
+  padding-left: 52%;
   padding-right: 0;
 }
 .music-image {
   width: 167px;
   height: 167px;
+}
+.music-image-shadow {
+  position: absolute;
+  margin-left: -4px;
+  margin-top: -1px;
 }
 .music-cover {
   display: inline-table;
@@ -183,7 +188,7 @@ img.about-title {
   width: 167px;
   height: 233px;
   margin: 0;
-  margin-right: 5%;
+  padding-right: 56px;
 }
 .music-title {
   padding-top: 5px;
@@ -203,12 +208,12 @@ img.about-title {
   padding-left: 0;
   padding-right: 0;
   padding-top: 75px;
+  padding-left: 33%;
 }
 .page-press .page-content a {
   text-decoration: none;
 }
 .press-cover {
-  padding-left: 33%;
   display: inline-table;
   padding-top: 15px;
 }
@@ -246,6 +251,13 @@ img.about-title {
   padding-right: 5%;
   padding-top: 45px;
   padding-left: 50%;
+}
+.video-image-shadow {
+  position: absolute;
+  width: 628px;
+  height: 421px;
+  margin-left: -4px;
+  margin-top: -1px;
 }
 .video-content {
   padding-top: 25px;
@@ -329,7 +341,7 @@ nav li {
   padding-left: 10px;
 }
 nav {
-  position: fixed;
+  position: relative;
   top: 0px;
   right: 0px;
   display: inline-block;
@@ -339,6 +351,9 @@ nav {
   padding: 0;
   padding-right: 48px;
   padding-top: 32px;
+}
+header {
+  padding-bottom: 70px;
 }
 .bot-nav-group,
 .top-nav-group {
