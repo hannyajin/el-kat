@@ -105,7 +105,7 @@ app.factory('contentFactory', [function() {
       title: 'Snake Eyes',
       other: 'Indoor Storm Remix'
     }, {
-      src: 'img/covers/RightHere_IndoorsMix2.jpeg',
+      src: 'img/covers/right_here_isr.jpg',
       url: '#',
       title: 'Right Here',
       other: '(Indoor Storm Remix)'

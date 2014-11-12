@@ -270,6 +270,7 @@ img.about-title {
 ---------------------*/
 .icons {
   position: relative;
+  max-height: 38px;
   -webkit-transition: all 0.1s ease-out 0.1s;
   -moz-transition: all 0.1s ease-out 0.1s;
   -ms-transition: all 0.1s ease-out 0.1s;
@@ -398,7 +399,7 @@ header {
   display: block;
   padding: 8px 20px;
   color: #ffffff;
-  background-color: #49aeef;
+  background-color: #1a9ef9;
   text-align: right;
   text-decoration: none;
   line-height: 1;
@@ -413,7 +414,7 @@ header {
   height: 6px;
   top: 2px;
   margin-bottom: 7px;
-  background: #49aeef;
+  background: #1a9ef9;
 }
 /** PNG Icons
 ---------------------*/
@@ -425,7 +426,7 @@ header {
   top: 0px;
   display: block;
   color: #49aeef;
-  fill: #49aeef;
+  fill: #1a9ef9;
   width: 42px;
   height: 42px;
 }
@@ -487,7 +488,7 @@ header {
   }
 }
 */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1490px) {
   footer {
     display: none;
   }
@@ -516,7 +517,7 @@ header {
     padding-right: 0px;
   }
 }
-/** DISABLE Small screen responsive layout 
+/** DISABLE Small screen responsive layout based on client request
    -> compensate with large viewport
 
 /*
