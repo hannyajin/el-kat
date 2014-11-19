@@ -66,6 +66,10 @@
 @title_font_family: 'Oswald Regular';
 @text_font_family: 'DroidSans';
 
+// font families
+@title_font_family: Arial;
+@text_font_family: Arial;
+
 @press_title_font_family: @title_font_family;
 @press_text_font_family: @text_font_family;
 
@@ -161,7 +165,7 @@ html, body {
   min-width: 630px;
 
   //overflow: hidden !important;
-  font-family: 'Arial Regular'
+  font-family: Arial
 }
 
 // preload images
@@ -232,7 +236,8 @@ a {
   z-index: -50;
 
   //.background-size("cover !important");
-  .background-size(cover);
+  //.background-size(cover);
+  .background-size(100% 100%);
   margin: 0;
   padding: 0;
 }
